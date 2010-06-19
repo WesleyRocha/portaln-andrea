@@ -1,0 +1,20 @@
+<h1>
+	<%= t('portaln.contatos.listagem') %>
+</h1>
+
+<% unless @configuracao %>
+
+	<h3><%= t('portaln.configuracoes.mensagens.nao_configurado') %></h3>
+
+<% else %>
+
+	<% if @configuracao.contato.length > 0 %>
+		<div id="sobre">
+			<%= @configuracao.contato %>
+		</div>              
+	<% end %>       
+    
+	<%= render :partial => 'contatos/form' %>
+<% end %>
+
+<br/>

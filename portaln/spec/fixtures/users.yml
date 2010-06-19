@@ -1,0 +1,26 @@
+test:
+  id: 1
+  email: "test@gmail.com"
+  encrypted_password: "521e77f3d287e713966e546579d07e33c616e871" #testtest
+  password_salt: "r9qN4E9giWTU7PImWPBH"
+  username: "test"
+  name: "Test"
+  role_name: "operador"
+  
+test2:
+  id: 2
+  email: "test2@gmail.com"
+  encrypted_password: "521e77f3d287e713966e546579d07e33c616e871" #testtest
+  password_salt: "r9qN4E9giWTU7PImWPBH"
+  username: "test2"
+  name: "Test2"
+  role_name: "operador"
+  
+admin:
+  id: 3
+  email: "admin@gmail.com"
+  encrypted_password: "1815aad47943710916c279f63e6e72d46d8680bd" #adminadmin
+  password_salt: "KihnWiurVPTff2WXWdJj"
+  username: "admin"
+  name: "Admin"
+  role_name: "administrador"

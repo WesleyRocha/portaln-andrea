@@ -1,0 +1,49 @@
+<%= stylesheet_link_tag "gallerific" %>
+
+<%= javascript_include_tag 'jquery-plugins/jquery.galleriffic' %>
+<%= javascript_include_tag 'jquery-plugins/jquery.history' %>
+<%= javascript_include_tag 'jquery-plugins/jquery.opacityrollover' %>
+<%= javascript_include_tag 'jquery-plugins/jush' %>
+
+<%= javascript_include_tag 'views/albuns/gallerific' %>
+
+<div class="galeria">
+	<div id="container">
+		
+		<div class="navigation-container">
+			<div id="thumbs" class="navigation">
+				<a class="pageLink prev" style="visibility: hidden;" href="#" title="Previous Page"></a>
+				
+				<ul class="thumbs noscript">
+					<% fotos.each_with_index do |foto, index| %>
+						
+						<li>
+							<a class="thumb" 
+								 name="<%= foto.imagem_file_name %>" 
+								 href="<%= foto.imagem.url(:normal) %>" 
+								 title="<%= foto.legenda %>">
+								
+								<%= image_tag foto.imagem.url(:thumb) %>
+							</a>
+						</li>   
+						
+					<% end %>
+				</ul>
+				
+				<a class="pageLink next" style="visibility: hidden;" href="#" title="Next Page"></a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="slideshow-container">
+				<div id="controls" class="controls"></div>
+				<div id="loading" class="loader"></div>
+				<div id="slideshow" class="slideshow"></div>
+			</div>
+			<div id="caption" class="caption-container">
+				<div class="photo-index"></div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		
+	</div>
+</div>

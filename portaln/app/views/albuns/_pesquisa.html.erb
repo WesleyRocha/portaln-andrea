@@ -1,0 +1,16 @@
+<div id="pesquisa_albuns">
+	<% form_tag({:controller => :albuns, :action => :index}, {:method => :get}) do %>
+		<div class="field" style="width: 9%; float: left;">         
+			<%= select_tag 'workflow_state', 
+					options_for_select(
+						Album.workflow_spec.states.keys.sort.reverse.collect {|s| [s.to_s, s.to_s] },
+						params[:workflow_state] ? params[:workflow_state] : ''
+					) 
+			%>                       
+		</div>
+		<div class="buttons">
+			<%= submit_tag "#{t('portaln.albuns.pesquisa.filtro')}", :style => 'padding:0 5px;' %>
+		</div>
+		<div style="clear: both;"></div>
+	<% end %>                 
+</div>

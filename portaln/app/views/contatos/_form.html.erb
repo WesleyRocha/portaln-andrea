@@ -1,0 +1,44 @@
+<br/>
+
+<% form_tag :controller => :contatos, :action => :create do %>
+  
+	<div class="field" style="width: 90%;">
+	  <p>
+	    <label><%= t('activerecord.attributes.mensagem.nome') %></label>
+	    <%= text_field_tag 'mensagem[nome]', '', :style => "width: 600px;" %>
+	  </p>
+	           
+		<p>
+	    <label><%= t('activerecord.attributes.mensagem.email') %></label>
+	    <%= text_field_tag 'mensagem[email]', '', :style => "width: 600px;" %>
+	  </p>
+
+		<p>
+	    <label><%= t('activerecord.attributes.mensagem.assunto') %></label>
+	    <%= text_field_tag 'mensagem[assunto]', '', :style => "width: 600px;" %>
+	  </p>
+	
+	  <p>
+	    <label><%= t('activerecord.attributes.mensagem.conteudo') %></label>
+	    <%= text_area_tag 'mensagem[conteudo]', '' %>
+	  </p>
+		
+		<p>
+			<%= show_simple_captcha (:label => t('portaln.contatos.mensagens.informe_captcha')) %>
+		</p>
+	
+	</div>
+  
+ 	<div style="clear: both;"></div>                           
+
+	<br/>
+	
+	<div class="buttons">
+	  <p>
+	    <%= submit_tag t("portaln.enviar") %>
+	  </p>                 
+	</div>
+	
+ 	<div style="clear: both;"></div>                           
+
+<% end %>

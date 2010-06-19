@@ -1,0 +1,38 @@
+<%= javascript_include_tag 'ckeditor/ckeditor' %>
+<%= javascript_include_tag 'ckeditor/adapters/jquery' %>
+<%= javascript_include_tag 'views/configuracoes/form' %>
+
+<% form_for(@configuracao, :url => {:action => :update}) do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :id %>
+
+	<div class="field" style="width: 90%;">
+	  <p>
+	    <%= f.label :email %>
+	    <%= f.text_field :email %>
+	  </p>
+	</div>
+		                                        
+	<div style="clear: both;"></div>                            
+
+	<div class="field" style="width: 90%;">
+	  <p>
+	    <%= f.label :contato %>
+	    <%= f.text_area :contato %>
+	  </p>
+	</div>
+	
+	<div style="clear: both;"></div>                            
+	
+	<br/>
+	
+	<div class="buttons">
+	  <p>
+	    <%= f.submit t("portaln.salvar") %>
+	  </p>                 
+	</div>
+ 	<div style="clear: both;"></div>                            
+	
+<% end %>            
+
+<br/>

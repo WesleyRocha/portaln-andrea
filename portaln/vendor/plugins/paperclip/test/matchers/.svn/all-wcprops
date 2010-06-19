@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/matchers
+END
+validate_attachment_size_matcher_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/matchers/validate_attachment_size_matcher_test.rb
+END
+validate_attachment_content_type_matcher_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 193
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/matchers/validate_attachment_content_type_matcher_test.rb
+END
+have_attached_file_matcher_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/matchers/have_attached_file_matcher_test.rb
+END
+validate_attachment_presence_matcher_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/matchers/validate_attachment_presence_matcher_test.rb
+END

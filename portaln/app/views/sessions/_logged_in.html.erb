@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+	<div id="logged_in">
+		<%= link_to current_user.username, :controller => :registrations, :action => :edit %>
+		&nbsp;|&nbsp;
+		<%= link_to t("portaln.logged_in.logout"), destroy_user_session_path %>
+	</div>               
+<% end %>

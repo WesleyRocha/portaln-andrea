@@ -1,0 +1,28 @@
+<h2 id="registration_title"><%= t("portaln.registro.editar") %></h2>
+                
+<div>
+	<% form_for @user, :url => {:controller => :registrations, :action => :update}, :html => { :method => :put } do |f| -%>
+		<%= f.error_messages %>
+		
+	  <div class="field" style="width: 90%;">
+			<%= render :partial => 'registrations/fields', :locals => {:f => f} %>
+			<div style="clear: both;"></div>
+	
+			<div style="float: left;">
+			  <p><%= f.label :current_password %></p>
+			  <p><%= f.password_field :current_password %></p>
+			</div>
+			<div style="clear: both;"></div>
+		
+		</div>
+	
+		<div class="buttons">
+			<p><%= f.submit t("portaln.registro.atualizar") %></p>
+		</div>
+		
+		<br/>
+		<br/>       
+		
+	<% end -%>
+	
+</div>

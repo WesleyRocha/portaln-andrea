@@ -1,0 +1,25 @@
+<%= javascript_include_tag 'views/noticias/ultimas.js' %>
+
+<div id="ultimas_noticias" class="ultimas_noticias">
+	<span id="load">
+		<%= image_tag 'load.gif' %>&nbsp;
+		<%= t("portaln.noticias.carregando_ultimas") %>
+	</span>
+	<div id="ultimas_content" style="display: none;">
+		<div id="titulo_ultimas" class="titulo">
+			<div class="box">
+				<% link_to noticias_path do %>
+					<%= t("portaln.noticias.ultimas") %> <%= image_tag 'icons/gray_arrow_16.png', :border => 0 %>
+				<% end %>
+			</div>                                       
+			<div id="clear_ultimas" style="clear: both;"></div>
+			<div id="feed_ultimas" style="display: none;">            
+				<% link_to noticias_ultimas_feeds_url do %>
+					<%= image_tag 'icons/feed.png', :border => 0 %>
+				<% end %>
+			</div>
+		</div>
+		<div id="content_ultimas">
+		</div>                                     
+	</div>
+</div>

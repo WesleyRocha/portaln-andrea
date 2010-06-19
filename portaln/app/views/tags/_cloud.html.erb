@@ -1,0 +1,11 @@
+<% unless @tags.nil? or @tags.empty? %>
+	<% tag_cloud @tags, %w(tag_small tag_little tag_medium tag_big) do |tag, css_class| %>
+	  <%= link_to tag.name, 
+								url_for(:controller => @controller_name,
+												:action => @action_name,
+												:tag => tag.name), 
+								:class => css_class %>
+	<% end %>                            
+<% else %>
+	<i>Nenhuma tag encontrada.</i>
+<% end %>

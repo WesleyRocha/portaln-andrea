@@ -1,0 +1,16 @@
+<% if @noticias and (not @noticias.empty?) %>
+	<ul class="ultimas_noticias_lista">
+		<% @noticias.each do |noticia| %>
+			<li>                            
+				<small style="color: #999999;">
+					<%= noticia.created_at_str %>&nbsp;<%= time_format noticia.created_at %>
+				</small>
+				<% link_to(noticia_path(noticia), :title => noticia.titulo) do %>  
+					<%= truncate(noticia.titulo, :length => 50) %>
+				<% end %>
+			</li>
+		<% end %>
+	</ul>
+<% else %>
+	<i><%= t('portaln.noticias.nenhuma_encontrada') %></i>
+<% end %>

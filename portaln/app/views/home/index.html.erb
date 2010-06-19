@@ -1,0 +1,82 @@
+<%= javascript_include_tag 'views/home/index.js' %>
+
+<h1>Home</h1>
+                    
+<style> 
+	#gerais {
+	}
+	
+	#saude {
+	}
+	
+	#tecnologia {
+	}
+	
+	#tag_cloud_noticia {
+		width: 45%;
+		float: left;
+	}                
+	
+	#ultimas_noticias {
+		width: 45%;
+		float: left;
+	}
+	
+</style>
+
+<%= render :partial => 'noticias/componentes/box_noticias', :locals => {
+	:noticias => @gerais,
+	:box_id => 'gerais',   
+	:feed_path => noticias_tag_feeds_url(:tag => 'geral'),
+	:titulo =>  link_to("Gerais #{image_tag 'icons/gray_arrow_16.png', :border => 0}", 
+							 				 :controller => :noticias, 
+											 :action => :index, 
+											 :tag => 'geral')
+} %>
+
+<%= render :partial => 'noticias/componentes/box_noticias', :locals => {
+	:noticias => @saude,
+	:box_id => 'saude',
+	:feed_path => noticias_tag_feeds_url(:tag => 'saúde'),
+	:titulo => link_to("Saúde #{image_tag 'icons/gray_arrow_16.png', :border => 0}", 
+							 				 :controller => :noticias, 
+											 :action => :index, 
+											 :tag => 'saúde')
+} %>
+
+<%= render :partial => 'noticias/componentes/box_noticias', :locals => {
+	:noticias => @tecnologia,
+	:box_id => 'tecnologia',
+	:feed_path => noticias_tag_feeds_url(:tag => 'tecnologia'),
+	:titulo => link_to("Tecnologia #{image_tag 'icons/gray_arrow_16.png', :border => 0}", 
+							 				 :controller => :noticias, 
+											 :action => :index, 
+											 :tag => 'tecnologia')
+} %>                      
+               
+<div style="clear: both;"></div>
+ 
+<%= render :partial => 'noticias/componentes/ultimas' %>
+
+<%= render :partial => 'noticias/componentes/tagcloud' %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

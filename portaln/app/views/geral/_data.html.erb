@@ -1,0 +1,15 @@
+<div class="data">
+	<% if object.published_at.nil? %>
+
+		<%= date_format(object.created_at) %>
+		&nbsp;&agrave;s&nbsp;
+		<%= time_format (object.created_at) %>
+		
+	<% else %>
+		
+		<%= date_format(object.published_at) %>
+		&nbsp;&agrave;s&nbsp;
+		<%= time_format (object.published_at) %>
+		
+	<% end %>
+</div>

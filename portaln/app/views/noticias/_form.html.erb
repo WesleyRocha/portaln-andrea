@@ -1,0 +1,78 @@
+<%= javascript_include_tag 'ckeditor/ckeditor' %>
+<%= javascript_include_tag 'ckeditor/adapters/jquery' %>
+<%= javascript_include_tag 'views/noticias/new' %>
+
+<% form_for(@noticia) do |f| %>
+  <%= f.error_messages %>
+  
+	<div class="field" style="width: 90%;">
+	  <p>
+	    <%= f.label :titulo %><br />
+	    <%= f.text_field :titulo, :style => "width: 640px;" %>
+	  </p>
+	           
+		<p>
+	    <%= f.label :resumo %><br />       
+		  <%= check_box_tag 'sem_resumo', '', @noticia.resumo.nil?, 
+					:class => 'input_normal' %><%= t('portaln.noticias.sem_resumo') %>
+	    <%= f.text_area :resumo %>
+	  </p>
+	
+	  <p>
+	    <%= f.label :conteudo %><br />
+	    <%= f.text_area :conteudo %>
+	  </p>
+	</div>
+	<div style="clear: both;"></div>
+
+	<%= render :partial => 'tags/tags_form' %>
+	
+	<div id="tag_container">
+		<%= render :partial => 'tags/tags_list', :locals => {:object => @noticia} %>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<br/>
+	                            
+	<div class="buttons">
+	  <p>
+	    <%= f.submit t("portaln.salvar") %>
+	  </p>                 
+	</div>
+ 	<div style="clear: both;"></div>                            
+
+<% end %>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<% unless noticias.nil? or noticias.empty? %>
+	<span id="load" style="display: none;">
+		<%= image_tag 'load.gif' %>&nbsp;publicando...
+	</span>
+	<% noticias.each_with_index do |noticia, index| %>       
+			<% css = index.even? ? 'noticia_even' : 'noticia_odd' %>
+			<div id="noticia_<%= noticia.id %>" class="noticia <%= css %>">
+				<%= hidden_field_tag 'noticia_id', noticia.id, :id => 'noticia_id' %>
+		    <h2>
+					<%= link_to "#{h noticia.titulo}", noticia_path(noticia) %>
+				</h2>                  
+		  
+				<%= render :partial => 'geral/data', :locals => {:object => noticia} %>
+			       
+				<% if user_signed_in? and current_user.may_editar_noticia? noticia %>
+					<%= render :partial => 'noticias/opcoes', :locals => {:noticia => noticia} %>
+					<br/>
+				<% end %>
+			
+				<% if noticia.resumo.blank? %>
+					<%= noticia.conteudo %>
+				<% else %>
+		    	<%= noticia.resumo %>
+				<% end %>
+			</div>
+	<% end %>                       
+	
+	<div style="clear: both; margin: -20px;"></div>
+	<div align="right">
+		<%= will_paginate noticias %>
+	</div>
+<% else %>
+	<i><%= t("portaln.noticias.nenhuma_encontrada") %></i>
+<% end %>

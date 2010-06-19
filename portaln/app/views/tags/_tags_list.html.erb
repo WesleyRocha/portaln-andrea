@@ -1,0 +1,8 @@
+<% unless object.new_record? %>
+	<% object.tag_list.each do |tag| %>
+		<div class="tag_added">
+			<input type="hidden" value="<%= tag %>" name="tags[]">
+			<span class="tag"><%= tag %></span><span class="remove clicavel"></span>
+		</div>
+	<% end %>
+<% end %>

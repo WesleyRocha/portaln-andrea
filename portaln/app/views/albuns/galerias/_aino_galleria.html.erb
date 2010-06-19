@@ -1,0 +1,8 @@
+<%= javascript_include_tag 'jquery-plugins/aino_galleria' %>
+<%= javascript_include_tag 'views/albuns/aino_galleria' %>
+
+<div class="galeria">
+	<% fotos.each_with_index do |foto, index| %>
+		<%= image_tag foto.imagem.url(:normal) %>
+	<% end %>
+</div>

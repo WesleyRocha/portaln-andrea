@@ -1,0 +1,120 @@
+== O que é
+TODO: Escrever                  
+	
+== Funcionalidades
+* Publicação de notícias
+* Marcação por tags
+* Pesquisa indexada
+* Gerência de usuários
+* Login
+* Nuvem de tags
+* Feed para as notícias
+* Galeria de imagens
+* SEO (http://en.wikipedia.org/wiki/Search_engine_optimization)
+* Contato com mensagens no e-mail e dados configuráveis
+* Agendamento automático da reindexação do conteúdo (http://github.com/javan/whenever)
+
+== Como instalar
+TODO: Escrever
+        
+Programas necessários:                                           
+1 - +Postgresql+ 8.4+
+  sudo apt-get install postgresql
+  sudo port install postgresql
+	
+2 - +Sphinx+ com suporte ao +postgresql+
+
+3 - +ImageMagick+ 6.5.x+
+  sudo apt-get install imagemagick
+  sudo port install imagemagick
+
+4 - Instale as gems (Todas as dependências estão em config/environment.rb)
+  rake gems:install
+			                 
+=== Instalando o postgres
+* Mac OS
+  sudo port install postgresql84 postgresql84-server
+* Linux
+  TODO: Conferir nome do postgres no repositório
+		
+=== Instalando o Sphinx      
+* Mac OS
+  sudo port install sphinx
+* Linux (baseado em Debian)
+  sudo apt-get install sphinx
+
+ou faça o download em http://www.sphinxsearch.com/downloads.html e siga os seguintes passos:
+  ./configure --with-pgsql=/usr/local/include/postgresql
+  make
+  sudo make install
+
+=== Instalando o ImageMagick
+* Mac OS
+  sudo port install imagemagick
+* Linux (baseado em Debian)
+  sudo apt-get install imagemagick
+
+Teste assim:
+  convert --version
+
+  Version: ImageMagick 6.5.9-3 2010-02-19 Q16 http://www.imagemagick.org
+  Copyright: Copyright (C) 1999-2010 ImageMagick Studio LLC
+  Features: OpenMP OpenCL
+	                      
+=== Configurando o envio de e-mails
+Abra o arquivo <b>config/environment.rb</b> e altere as configurações a seguir:
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  config.action_mailer.smtp_settings = {
+    :domain          => "portaln.com",
+    :address         => 'smtp.gmail.com',
+    :port            => 587,
+    :tls             => true,
+    :authentication  => :login,
+    :user_name       => '',
+    :password        => ''
+  }
+  
+O portaln já está configurado para utilizar o GMail, nesse caso, apenas informe o :user_name
+e o :password que tudo deverá funcionar.
+	
+== Como rodar
+Para rodar o <b>portaln</b> lembre-se de rodar o motor de indexação +sphinx+ e a tarefa +delayed_job+,
+que é responsável por marcar os conteúdos que precisam ser indexados (conteúdo novo). Seu servidor
+deverá possuir cronjob para o seu usuário, pois o sistema irá agendar a reindexação do conteúdo.
+  ruby script/server
+  rake ts:start
+  rake thinking_sphinx:delayed_delta
+  whenever --update-crontab PortalN
+
+Você pode utilizar o script <b>start.sh</b>:
+  ./start.sh
+
+Para finalizar a tarefa do cron, utilize:
+  ./stop_crontab.sh
+	
+ou
+  crontab -r        
+
+Caso você queira reconfigurar a execução da tarefa, altere o arquivo <b>config/schedule.rb</b>
+
+TODO: Testar isso no +mod_rails+
+	
+== Dados de teste
+Para popular o banco com alguns dados de teste, rode a seguinte tarefa do rake:
+  rake db:test:seed
+	
+== Bugs?
+Reporte em http://github.com/tulios/portaln/issues	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

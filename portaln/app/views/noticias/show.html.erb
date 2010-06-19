@@ -1,0 +1,35 @@
+<%= javascript_include_tag 'jquery-plugins/cookie' %>
+<%= javascript_include_tag 'jquery-plugins/jquery.fontscale' %>
+<%= javascript_include_tag 'views/noticias/show' %>
+                     
+<span id="load" style="display: none;">
+	<%= image_tag 'load.gif' %>&nbsp;<%= t('portaln.noticias.publicando') %>
+</span>            
+<div id="noticia" class="noticia">
+	<%= hidden_field_tag 'noticia_id', @noticia.id %>
+	<h1>
+		<%= link_to "#{h @noticia.titulo}", noticia_path(@noticia) %>
+	</h1>                 
+	<%= render :partial => 'noticias/info', :locals => {:noticia => @noticia} %>
+	
+	<% if user_signed_in? and current_user.may_editar_noticia? @noticia %>
+		<%= render :partial => 'noticias/opcoes', :locals => {:noticia => @noticia} %>
+		<br/>
+	<% end %>
+	
+	<div class="view">
+  	<%= @noticia.conteudo %>
+	</div>
+  
+	<% unless @noticia.tags_string.empty? %>
+		<div class="tag_string">
+			<% @noticia.tag_list.each do |tag| %>
+				<%= link_to tag, :controller => :noticias, :tag => tag %>&nbsp;
+			<% end %>
+		</div>   
+	<% end %>
+</div>
+
+<br/>
+
+<%= link_to "#{t('portaln.voltar')}", noticias_path %>

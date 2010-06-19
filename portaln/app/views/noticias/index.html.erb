@@ -1,0 +1,23 @@
+<%= javascript_include_tag 'views/noticias/index.js' %>
+
+<h1>
+	<%= t("portaln.noticias.listagem") %>
+	<% if params[:tag] %>
+		<%= t('portaln.noticias.tag.sobre') %>&nbsp;<%= params[:tag] %>
+	<% end %>
+	
+	<div class="feed_in_title">
+		<% link_to (params[:tag] ? noticias_tag_feeds_url(:tag => params[:tag]) : noticias_ultimas_feeds_url) do %>
+			<%= image_tag 'icons/feed.png', :border => 0 %>
+		<% end %>
+	</div>
+	
+</h1>                               
+     
+<% if user_signed_in? %>     
+	<%= render :partial => 'noticias/pesquisa' %>
+<% end %>                             
+
+<div class="noticias">
+	<%= render :partial => 'noticias/lista', :locals => {:noticias => @noticias} %>
+</div>

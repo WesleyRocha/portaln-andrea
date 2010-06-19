@@ -1,0 +1,65 @@
+<%= javascript_include_tag 'views/pesquisa/result.js' %>
+
+<% if @objetos and (not @objetos.empty?) %>
+	<% @objetos.each_with_index do |obj, index| %>
+			<% if obj.class == Album %>           
+				<% album = obj %>
+       
+				<div id="album_id_<%= album.id %>" class="album">                       
+					<% capa_id = album.capa ? album.capa.id : 'default' %>
+					<% capa_url = capa_id == 'default' ?  default_img_path : album.capa.imagem.url(:thumb) %>
+
+					<% link_to(album) do %>    
+						<div id="imagem_id_<%= capa_id %>" 
+								 class="foto_thumb <%= (album.descricao and (not album.descricao.empty?)) ? 'descricao' : '' %>"
+								 style="background: url('<%= capa_url %>');"
+								 title="<%= album.descricao %>">
+						</div>              
+					<% end %>
+
+					<div class="foto_info">
+						<h3>
+							<%= link_to "#{album.excerpts.titulo}", album_path(album) %>
+						</h3>
+
+						<%= render :partial => 'geral/data', :locals => {:object => album} %>
+
+						<% if user_signed_in? and current_user.may_editar_album? album %>
+							<%= render :partial => 'albuns/opcoes', :locals => {:album => album} %>
+							<br/>
+						<% end %>
+						
+						<%= album.excerpts.descricao %>
+					</div>
+				</div>
+		    <div style="clear: both;"></div>
+		
+			<% else obj.class == Noticia %>       
+		
+			  <% noticia = obj %>
+				<div id="noticia_<%= noticia.id %>" class="noticia">
+					<%= hidden_field_tag 'noticia_id', noticia.id, :id => 'noticia_id' %>
+			    <h3>
+						<%= link_to "#{noticia.excerpts.titulo}", noticia_path(noticia) %>
+					</h3>                  
+  
+					<%= render :partial => 'geral/data', :locals => {:object => noticia} %>
+	       
+					<% if user_signed_in? and current_user.may_editar_noticia? noticia %>
+						<%= render :partial => 'noticias/opcoes', :locals => {:noticia => noticia} %>
+						<br/>
+					<% end %>
+					
+					<%= noticia.excerpts.conteudo %>
+					
+				</div>
+		
+			<% end %>
+		<% end %>
+		<div style="clear: both;"></div>
+		<div align="right">
+			<%= will_paginate @objetos %>
+		</div>
+<% else %>
+	<i>Nenhum resultado encontrado.</i>
+<% end %>

@@ -1,0 +1,38 @@
+<div id="lista_fotos">
+	<%= hidden_field_tag 'album_id', @album.id %>
+	<ul id="lista_fotos_carregadas">
+		
+		<% if @fotos and (not @fotos.empty?) %>
+	    <% @fotos.each_with_index do |foto, index| %>
+	      <li class='box_foto <%= (foto.ordem == 0) ? 'capa' : '' %>' id="<%= foto.id %>">
+	        <%= image_tag foto.imagem.url(:thumb), 
+							:style => "border: 1px solid black; margin: auto;", 
+							:class => 'clicavel' 
+					%>
+	        <br/>    
+					<div id="opcoes_da_foto">
+						<%= check_box_tag "fotos[#{foto.id}]", "#{foto.id}" %>
+						&nbsp;
+		        <%= link_to t('portaln.albuns.opcoes.remover_foto'), 
+												{:controller => :fotos, :action => :destroy, :id => foto.id, :album_id => @album.id}, 
+						  					{:confirm => "#{t('portaln.confirmacao_apagar')}", :method => :delete} %>
+						<% if foto.publicada? %>
+							&nbsp;
+						  <%= image_tag 'icons/publicar_fotos_32.png', 
+									:width => '16px', :height => '16px', :title => t("portaln.fotos.publicada") %>
+						<% else %>
+							&nbsp;
+							<%= image_tag 'icons/tirar_do_ar_32.png', 
+									:width => '16px', :height => '16px', :title => t("portaln.fotos.fora_do_ar") %>
+						<% end %>
+					</div>
+	      </li>
+	    <% end %>
+	    <div style="clear:both;">
+		
+	  <% else %>
+	  	<i><%= t('portaln.albuns.nenhuma_foto_encontrada') %></i>
+	  <% end %>
+	
+	</ul>
+</div>

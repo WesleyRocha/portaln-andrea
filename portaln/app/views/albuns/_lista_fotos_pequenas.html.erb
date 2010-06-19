@@ -1,0 +1,38 @@
+<%= javascript_include_tag 'views/albuns/index' %>
+
+<% albuns.each_with_index do |album, index| %>
+
+	<% if index.even? %>
+		<div style="clear: both;"></div>
+	<% end %>
+
+	<div id="album_id_<%= album.id %>" class="album">                       
+		                       
+		<% capa_id = album.capa ? album.capa.id : 'default' %>
+		<% capa_url = capa_id == 'default' ?  default_img_path : album.capa.imagem.url(:thumb) %>
+		
+		<% link_to(album) do %>    
+			<div id="imagem_id_<%= capa_id %>" 
+					 class="foto_thumb <%= (album.descricao and (not album.descricao.empty?)) ? 'descricao' : '' %>"
+					 style="background: url('<%= capa_url %>');"
+					 title="<%= album.descricao %>">
+			</div>              
+		<% end %>
+		
+		<div class="foto_info">
+			<h3>
+				<%= link_to "#{h album.titulo}", album_path(album) %>
+			</h3>
+		
+			<%= render :partial => 'geral/data', :locals => {:object => album} %>
+		
+			<% if user_signed_in? and current_user.may_editar_album? album %>
+				<%= render :partial => 'albuns/opcoes', :locals => {:album => album} %>
+			<% end %>
+		</div>
+	</div>
+<% end %>          
+<div style="clear: both;"></div>
+<div align="right">
+	<%= will_paginate albuns %>
+</div>

@@ -1,0 +1,1 @@
+gource --disable-progress --stop-at-end --output-ppm-stream - | ffmpeg -y -b 3000K -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -vpre hq -crf 28 -threads 0 portaln_gource.mp4

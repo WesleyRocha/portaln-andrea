@@ -1,0 +1,27 @@
+<%= hidden_field_tag :url_publicar, url_for(:controller => :fotos, :action => :publicar) %>
+<%= hidden_field_tag :url_tirar_do_ar, url_for(:controller => :fotos, :action => :tirar_do_ar) %>
+<%= hidden_field_tag :url_salvar_ordenacao, url_for(:controller => :fotos, :action => :salvar_ordem) %>
+<%= hidden_field_tag :url_editar_legendas, url_for(:controller => :fotos, :action => :carregar_legendas) %>
+
+<div class="buttons">
+	<a id="selecionar_todos">
+  	<%= t('portaln.albuns.opcoes.selecionar_todas') %>
+	</a>                    
+  <input type="checkbox" id="hidden_check" style="display: none;" checked="checked"/>
+	<a id="publicar_fotos">
+		<%= image_tag 'icons/publicar_fotos_32.png' %>
+  	<%= t('portaln.albuns.opcoes.publicar') %>
+	</a>     
+	<a id="tirar_do_ar" class="negative">
+		<%= image_tag 'icons/tirar_do_ar_32.png' %>
+  	<%= t('portaln.albuns.opcoes.tirar_do_ar') %>
+	</a>      
+	<a id="salvar_ordenacao">
+		<%= image_tag 'icons/ordenar.png' %>
+  	<%= t('portaln.albuns.opcoes.salvar_ordenacao') %>
+	</a>       
+	<a id="editar_legendas">
+		<%= image_tag 'icons/editar_legenda_32.png' %>
+  	<%= t('portaln.albuns.opcoes.editar_legendas') %>
+	</a>       
+</div>

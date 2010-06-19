@@ -1,0 +1,45 @@
+<%= javascript_include_tag 'views/fotos/carregar_legendas' %>
+                        
+<h1><%= t('portaln.albuns.edicao_legendas') %></h1>
+<h3>
+	<i><%= @album.titulo %></i>
+</h3>
+                  
+<% form_tag :controller => :fotos, :action => :salvar_legendas do %>
+	<%= hidden_field_tag :album_id, @album.id %>
+  
+	<div class="field" style="width: 90%;">
+	<% @fotos.each_with_index do |foto, index| %>
+	    <% css = index.even? ? 'noticia_even' : 'noticia_odd' %>
+			       
+			<div class="<%= css %>">
+				<div id="imagem_id_<%= foto.id %>" 
+						 class="foto_thumb"
+						 style="background: no-repeat url('<%= foto.imagem.url(:thumb) %>'); margin-top: 5%;">
+				</div>      
+				<div style="margin-left: 120px;">
+					<label><%= t('activerecord.attributes.foto.fotografo') %></label>
+			    <%= text_field_tag "fotos[#{foto.id}][fotografo]", foto.fotografo, :size => 50 %>
+					<label><%= t('activerecord.attributes.foto.legenda') %></label>
+	        <%= text_area_tag "fotos[#{foto.id}][legenda]", foto.legenda, :rows => 2, :cols => 100 %>
+				</div>             
+			</div>                  
+	<% end %>                                                         
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<br/>
+	                            
+	<div class="buttons">
+	  <p>
+	    <%= submit_tag t("portaln.salvar") %>
+	  </p>                 
+	</div>
+ 	<div style="clear: both;"></div>                            
+	
+<% end %>
+
+<br/>
+
+<%= link_to "#{t('portaln.voltar')}", edit_album_path(@album) %>

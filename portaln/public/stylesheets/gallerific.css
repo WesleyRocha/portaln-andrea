@@ -1,0 +1,199 @@
+.galeria div#container {
+	overflow: hidden;
+}
+.galeria div.content {
+	display: none;
+	clear: both;
+}
+
+.galeria div.content a, div.navigation a {
+	text-decoration: none;
+}
+.galeria div.content a:hover, div.content a:active {
+  /*text-decoration: underline;*/
+}
+
+.galeria div.navigation a.pageLink {
+	height: 77px;
+	line-height: 77px;
+}
+
+.galeria div.controls {
+	margin-top: 5px;
+	height: 23px;
+}
+.galeria div.controls a {
+	padding: 5px;
+}
+.galeria div.ss-controls {
+	float: left;
+}
+.galeria div.nav-controls {
+	float: right;
+}
+
+.galeria div.slideshow-container,
+.galeria div.loader,
+.galeria div.slideshow a.advance-link {
+	width: 600px; /* This should be set to be at least the width of the largest image in the slideshow with padding */
+}
+
+.galeria div.loader,
+.galeria div.slideshow a.advance-link,
+.galeria div.caption-container {
+	/* This should be set to be at least the height of the largest image in the slideshow with padding */	
+	/*height: 800px; */
+}
+
+.galeria div.slideshow-container {
+	position: relative;
+	clear: both;
+	float: left;
+	height: 655px;
+}
+
+.galeria div.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('/images/load.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.galeria div.slideshow span.image-wrapper {
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: 0;
+}
+.galeria div.slideshow a.advance-link {
+	display: block;     
+	/* This should be set to be at least the height of the largest image in the slideshow with padding */
+	/*line-height: 800px; */
+	text-align: center;
+}
+
+.galeria div.slideshow a.advance-link:hover,
+.galeria div.slideshow a.advance-link:active,
+.galeria div.slideshow a.advance-link:visited {
+	text-decoration: none;
+}
+.galeria div.slideshow a.advance-link:focus {
+	outline: none;
+}
+
+.galeria div.slideshow img {
+	border-style: solid;
+	border-width: 1px;
+}
+.galeria div.caption-container {
+	float: right;
+	position: relative;
+	margin-top: 30px;
+}
+.galeria span.image-caption {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.galeria div.caption-container, span.image-caption {
+	width: 334px;
+}
+
+.galeria div.caption {
+	padding: 0 12px;
+}
+
+.galeria div.image-title {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+.galeria div.image-desc {
+	line-height: 1.3em;
+	padding-top: 12px;
+}
+.galeria div.download {
+	margin-top: 8px;
+}
+.galeria div.photo-index {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 12px;
+}
+.galeria div.navigation-container {
+	float: left;
+	position: relative;
+	left: 50%;
+}
+.galeria div.navigation {
+	float: left;
+	position: relative;
+	left: -50%;
+}
+.galeria div.navigation a.pageLink {
+	display: block;
+	position: relative;
+	float: left;
+	margin: 2px;
+	width: 16px;
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+.galeria div.navigation a.pageLink:focus {
+	outline: none;
+}
+
+.galeria ul.thumbs {
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.galeria ul.thumbs li {
+	float: left;
+	padding: 0;
+	margin: 2px;
+	list-style: none;
+}
+.galeria a.thumb {
+	padding: 1px;
+	display: block;
+}
+.galeria a.thumb:focus {
+	outline: none;
+}
+.galeria ul.thumbs img {
+	border: none;
+	display: block;
+}
+.galeria div.pagination {
+	clear: both;
+	position: relative;
+	left: -50%;
+}
+.galeria div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
+	position: relative;
+	display: block;
+	float: left;
+	margin-right: 2px;
+	padding: 4px 7px 2px 7px;
+	border: 1px solid #ccc;
+}
+.galeria div.pagination a:hover {
+	text-decoration: none;
+}
+.galeria div.pagination span.current {
+	font-weight: bold;
+}
+.galeria div.pagination span.ellipsis {
+	border: none;
+	padding: 5px 0 3px 2px;
+}
+
+.galeria div.gallery-gutter {
+	clear: both;
+	padding-bottom: 20px;
+}

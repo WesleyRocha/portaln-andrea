@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip
+END
+callback_compatability.rb
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/callback_compatability.rb
+END
+processor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/processor.rb
+END
+style.rb
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/style.rb
+END
+iostream.rb
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/iostream.rb
+END
+thumbnail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/thumbnail.rb
+END
+storage.rb
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/storage.rb
+END
+upfile.rb
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/upfile.rb
+END
+matchers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/matchers.rb
+END
+attachment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/attachment.rb
+END
+interpolations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/interpolations.rb
+END
+geometry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/lib/paperclip/geometry.rb
+END

@@ -1,0 +1,21 @@
+<%= link_to "#{t('portaln.link_editar')}", edit_noticia_path(noticia) %>
+&nbsp;|&nbsp;
+<%= link_to "#{t('portaln.link_apagar')}", 
+						noticia, :confirm => "#{t('portaln.confirmacao_apagar')}", 
+						:method => :delete %>
+						
+<% if noticia.nova? %>						
+	&nbsp;|&nbsp;
+	<span id="span_publicar">
+		<%= link_to "#{t('portaln.noticias.publicar')}", 
+								{
+									:controller => :noticias,
+									:action => :publicar,
+									:id => noticia.id
+								},{
+									:class => 'publicar',
+									:id => 'publicar' 
+								} 
+		%>                     
+	</span>
+<% end %>						

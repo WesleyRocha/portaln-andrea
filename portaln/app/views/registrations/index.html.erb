@@ -1,0 +1,30 @@
+<h1 id="usuario_title"><%= t('portaln.usuarios.index') %></h1>     
+                 
+<div style="float: right;" class="buttons">
+	<% link_to (:controller => :registrations, :action => :new) do %>
+		<%= image_tag 'icons/plus_32.png' %><%= t('portaln.usuarios.novo') %>
+	<% end %>
+</div>
+
+<table width="100%">                      
+	<tr>
+		<th width="10%"><%= t('activerecord.attributes.user.created_at') %></th>
+		<th width="10%"><%= t('activerecord.attributes.user.role_name') %></th>
+		<th width="20%"><%= t('activerecord.attributes.user.username') %></th>
+		<th width="40%"><%= t('activerecord.attributes.user.name') %></th>
+		<th width="30%"><%= t('activerecord.attributes.user.email') %></th>
+	</tr>	
+	<% @users.each_with_index do |user, index| %>
+		<% css = index.even? ? 'even' : 'odd' %>
+		<tr class="<%= css %>">
+			<td><%= user.created_at_str %></td>                        
+			<td><%= user.role_name.upcase %></td>                        
+			<td><%= user.username %></td>    
+			<td><%= user.name %></td>    
+			<td><%= user.email %></td>   
+		</tr>
+	<% end %>   
+	<tr> 
+		<td><%= will_paginate @users %></td>
+	</tr>
+</table>

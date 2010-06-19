@@ -1,0 +1,35 @@
+pt_BR:
+  devise:
+    sessions:
+      link: 'Login'
+      signed_in: 'Login realizado com sucesso.'
+      signed_out: 'Logout realizado com sucesso.'
+      unauthenticated: 'Você precisa realizar o login ou se cadastrar antes de continuar.'
+      unconfirmed: 'Confirme sua conta antes de continuar.'
+      locked: 'Your account is locked.'
+      invalid: 'E-mail ou senha inválido.'
+      invalid_token: 'Invalid authentication token.'
+      timeout: 'Your session expired, please sign in again to continue.'
+      inactive: 'Your account was not activated yet.'
+    passwords:
+      link: 'Esqueceu a senha?'
+      send_instructions: 'Você irá receber um e-mail com instruções para resetar a sua senha em alguns minutos.'
+      updated: 'Sua senha foi alterada com sucesso! Já realizamos o seu login, aproveite.'
+    confirmations:
+      link: "Não recebeu as instruções de confirmação do cadastro?"
+      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
+      confirmed: 'Your account was successfully confirmed. You are now signed in.'
+    registrations:
+      link: 'Cadastrar'
+      signed_up: 'Usuário cadastrado com sucesso!'
+      updated: 'Você atualizou sua conta com sucesso.'
+      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
+    unlocks:
+      link: "Didn't receive unlock instructions?"
+      send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
+      unlocked: 'Your account was successfully unlocked. You are now signed in.'
+    mailer:
+      confirmation_instructions: 'Confirmation instructions'
+      reset_password_instructions: 'Reset password instructions'
+      unlock_instructions: 'Unlock Instructions'
+

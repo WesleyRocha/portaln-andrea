@@ -1,0 +1,32 @@
+<%= javascript_include_tag 'views/albuns/galeria' %>
+<div class="galeria">
+	
+	<div id="imagem_principal">
+		<%= image_tag 'blank.png' %>
+		
+		<div class="proxima_navigator">
+			<a class="proxima clicavel"></a>
+		</div>
+
+		<div class="anterior_navigator">
+			<a class="anterior clicavel"></a>
+		</div>
+	</div>
+               
+	<div class="left_navigator">
+		<a class="prev browse left"></a>
+	</div>
+                   
+	<div class="scrollable">
+	   <div class="items">
+        <% fotos.each_with_index do |foto, index| %>
+					<%= image_tag foto.imagem.url(:thumb) %>
+				<% end %>
+	   </div>
+	</div>
+
+  <div class="right_navigator">
+		<a class="next browse right"></a>
+	</div>
+	
+</div>

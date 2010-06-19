@@ -1,0 +1,40 @@
+<ul>
+	<li>
+		<%= link_to t('portaln.menu.home'), root_path, :id => check_tab?({:home => :all }) %>
+	</li>
+	<% if user_signed_in? %>
+		<li>
+			<%= link_to t('portaln.menu.escrever_noticia'), new_noticia_path, :id => check_tab?({
+				:noticias => :new
+			}) %>
+	  </li>
+	<% end %>
+	<li>
+		<%= link_to t('portaln.menu.noticias'), noticias_path, :id => check_tab?({
+			:noticias => [:index, :show, :edit]
+		}) %>
+	</li>
+	<li>
+		<%= link_to t('portaln.menu.albuns'), albuns_path, :id => check_tab?({
+			:albuns => [:index, :show, :edit, :new]
+		}) %>
+	</li>
+	<li>
+		<%= link_to t('portaln.menu.contato'), contatos_path, :id => check_tab?({
+			:contatos => :all
+		}) %>
+	</li>
+	<% if user_signed_in? and current_user.may_criar_usuarios? %>
+		<li>
+			<%= link_to t('portaln.menu.usuarios'), {:controller => :registrations, :action => :index}, 
+															 								 :id => check_tab?({:registrations => :all}) %>
+		</li>			
+	<% end %>
+	<% if user_signed_in? and current_user.may_configurar_sistema? %>
+		<li>
+			<%= link_to t('portaln.menu.configuracoes'), configuracoes_path, :id => check_tab?({
+				:configuracoes => :all
+			}) %>
+		</li>			
+	<% end %>
+</ul>

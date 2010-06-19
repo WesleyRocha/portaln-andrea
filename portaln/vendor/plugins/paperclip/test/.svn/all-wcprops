@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test
+END
+paperclip_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/paperclip_test.rb
+END
+processor_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/processor_test.rb
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/helper.rb
+END
+style_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/style_test.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/database.yml
+END
+integration_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/integration_test.rb
+END
+iostream_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/iostream_test.rb
+END
+thumbnail_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/thumbnail_test.rb
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/.gitignore
+END
+storage_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/storage_test.rb
+END
+upfile_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/upfile_test.rb
+END
+attachment_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/attachment_test.rb
+END
+interpolations_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/interpolations_test.rb
+END
+geometry_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/prj/liferay-customization/!svn/ver/372/portlets/galeria_portlet/tags/galeriaimagens-0.3.5.EB/galeria/vendor/plugins/paperclip/test/geometry_test.rb
+END

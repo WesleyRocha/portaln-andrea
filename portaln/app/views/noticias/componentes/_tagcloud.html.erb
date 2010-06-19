@@ -1,0 +1,15 @@
+<%= javascript_include_tag 'views/noticias/tagcloud.js' %>
+
+<div id="tag_cloud_noticia" class="tag_cloud">
+	<span id="load">
+		<%= image_tag 'load.gif' %>&nbsp;
+		<%= t("portaln.noticias.carregando_nuvem_tags") %>
+	</span>
+	<div id="tag_content" style="display: none;">
+		<div id="titulo_cloud" class="titulo">
+			<%= t("portaln.noticias.nuvem_tags") %>
+		</div>
+		<div id="content_cloud">
+		</div>                                     
+	</div>
+</div>

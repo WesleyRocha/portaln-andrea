@@ -1,0 +1,33 @@
+<div style="float: left;">
+	<p><%= f.label :username %></p>
+	<p><%= f.text_field :username, :size => 20 %></p>
+</div>             
+                                   
+<% if user_signed_in? and current_user.may_criar_usuarios? %>
+	<div style="float: left; margin-left: 12%;">
+	  <p><%= f.label :role_name %></p>
+	  <p><%= f.select :role_name, Permissions::ROLES %></p>
+	</div>
+<% end %>
+             
+<div style="clear: both;"></div>
+<div style="float: left;">
+	<p><%= f.label :name %></p>
+	<p><%= f.text_field :name, :size => 50 %></p>
+</div>
+
+<div style="float: right;">
+  <p><%= f.label :email %></p>
+  <p><%= f.text_field :email, :size => 50 %></p>
+</div>
+
+<div style="clear: both;"></div>
+<div style="float: left;">
+  <p><%= f.label :password %></p>
+  <p><%= f.password_field :password %></p>
+</div>
+
+<div style="float: right;">
+  <p><%= f.label :password_confirmation %></p>
+  <p><%= f.password_field :password_confirmation %></p>
+</div>

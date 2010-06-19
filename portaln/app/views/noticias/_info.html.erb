@@ -1,0 +1,17 @@
+<div class="noticia_info">
+	<%= render :partial => 'noticias/autor', :locals => {:noticia => noticia} %>	
+  <%= render :partial => 'geral/data', :locals => {:object => noticia} %>
+	<div id="font_size">
+		<ul>
+			<li>
+				<a id="down" title="Diminuir tamanho da letra" class="menos clicavel">A-</a>
+			</li>
+			<li>
+				<a id="reset" title="Tamanho padrão" class="resetar clicavel">A</a>
+			</li>
+			<li>
+				<a id="up" title="Aumentar tamanho da letra" class="mais clicavel">A+</a>
+			</li>
+		</ul>
+	</div> 
+</div>

@@ -1,0 +1,44 @@
+<div class="box_noticias" id="<%= box_id %>">
+	
+	<div class="titulo">
+		<%= titulo %>
+		                           
+		<% if feed_path and noticias and (not noticias.empty?) %>
+			<div class="feed_in_title">
+				<% link_to feed_path do %>
+					<%= image_tag 'icons/feed.png', :border => 0 %>
+				<% end %>
+			</div>
+		<% end %>
+		
+	</div>
+	                                          
+	<% if noticias and (not noticias.empty?) %>
+		<% capa = noticias.delete noticias.first # pega a primeira %>   
+		<%= link_to capa.titulo, noticia_path(capa), :class => 'titulo_capa' %>
+		<div>                         
+			<small>
+				<%= capa.created_at_str %>&nbsp;<%= time_format capa.created_at %>
+			</small>                                                            
+			<br/>
+			<% if capa.resumo.blank? %>
+				<%= capa.conteudo %>
+			<% else %>
+		  	<%= capa.resumo %>
+			<% end %>
+		</div>
+		<ul class="lista">
+			<% noticias.each do |noticia| %>
+				<li>
+					<small><%= noticia.created_at_str %>&nbsp;<%= time_format noticia.created_at %></small>
+					<br/>            
+					<div class="link_outras">
+						<%= link_to noticia.titulo, noticia_path(noticia) %>
+					</div>
+				</li>
+			<% end %>
+		</ul>                                    
+	<% else %>
+		<i><%= t('portaln.noticias.nenhuma_encontrada') %></i>
+	<% end %>
+</div>

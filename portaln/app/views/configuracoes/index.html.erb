@@ -1,0 +1,12 @@
+<h1>
+	<%= t("portaln.configuracoes.listagem") %>
+</h1>                         
+                                                             
+<% if @configuracao and @configuracao.quem_alterou %>
+	Alterado em <%= datetime_format(@configuracao.updated_at) %>
+	por <strong><%= @configuracao.quem_alterou.name %></strong> (<%= @configuracao.quem_alterou.username %>)
+<% end %>                                          
+
+<br/>
+
+<%= render :partial => 'configuracoes/form' %>

@@ -1,0 +1,9 @@
+<%= javascript_include_tag 'views/pesquisa/index' %>
+<div id="busca-padrao">
+	<div class="field query-field">
+		<%= text_field_tag 'query', (@query.nil? == false and (not @query.empty?)) ? @query : '' %>
+	</div>                              
+	<div class="buttons search-button">  
+		<a id="search"><%= t('portaln.buscar') %></a>
+	</div>
+</div>

@@ -1,0 +1,6 @@
+public/system/*
+coverage
+db/sphinx/
+public/sitemap1.xml.gz
+public/sitemap_index.xml.gz
+tmp/

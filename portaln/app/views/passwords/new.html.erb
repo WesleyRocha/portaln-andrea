@@ -1,0 +1,18 @@
+<h2><%= t("portaln.esqueceu_senha") %></h2>
+                                 
+<div>
+	<% form_for resource_name, resource, :url => password_path(resource_name) do |f| %>
+	  <%= f.error_messages %>
+             
+		<div class="field" style="width: 90%;">
+		  <%= f.label :email %>
+			<%= f.text_field :email %>
+			<div style="clear: both;"></div>
+		</div>
+
+	  <p><%= f.submit t("portaln.instrucoes_resetar_senha") %></p>
+	<% end %>
+                      
+	<br/>
+	<%= render :partial => "shared/devise_links" %>
+</div>

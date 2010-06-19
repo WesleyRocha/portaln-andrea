@@ -1,0 +1,5 @@
+<%= link_to "#{t('portaln.link_editar')}", edit_album_path(album) %>
+&nbsp;|&nbsp;
+<%= link_to "#{t('portaln.link_apagar')}", 
+						album, :confirm => "#{t('portaln.confirmacao_apagar')}", 
+						:method => :delete %>

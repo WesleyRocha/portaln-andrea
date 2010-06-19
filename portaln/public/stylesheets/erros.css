@@ -1,0 +1,58 @@
+.fieldWithErrors {
+  /*padding: 0px;
+  display: inline;*/
+	display: block;
+	font-weight: bold;
+	margin: 10px 15px;
+}
+
+.fieldWithErrors input{
+  background: #FFFFFF; /*#FFFFA8;*/
+  border-color: #c00;
+  display: inline;
+}
+
+.fieldWithErrors select{
+  background: #FFFFFF; /*#FFFFA8;*/
+  border-color: #c00;
+  display: inline;
+}
+
+.fieldWithErrors textarea{
+  background: #FFFFFF; /*#FFFFA8;*/
+  border-color: #c00;
+  display: inline;
+}
+
+#errorExplanation {
+  background:  #FFFFFF none repeat scroll; /*#FFFFA8*/
+  border-color: #C00;
+  border-style: solid;
+  border-width: 2px medium;
+  display: block;
+  margin-bottom: 20px;
+  /*width: 90%;*/
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 0px 5px 15px;
+  font-size: 12px;
+  margin: -2px 0px 0px 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+  margin-left: 20px;
+}
