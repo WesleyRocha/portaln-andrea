@@ -7,7 +7,7 @@
        
 				<div id="album_id_<%= album.id %>" class="album">                       
 					<% capa_id = album.capa ? album.capa.id : 'default' %>
-					<% capa_url = capa_id == 'default' ?  default_img_path : album.capa.imagem.url(:thumb) %>
+					<% capa_url = capa_id == 'default' ?  default_img_path : "/images/#{album.capa.imagem.url(:thumb)}" %>
 
 					<% link_to(album) do %>    
 						<div id="imagem_id_<%= capa_id %>" 

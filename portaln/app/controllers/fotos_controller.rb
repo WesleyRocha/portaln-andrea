@@ -22,13 +22,13 @@ class FotosController < ApplicationController
                      
   def show
     @foto = Foto.find(params[:id])
-    if @foto.publicada? or current_user.id == @foto.album.user.id
+    if @foto.publicada? or (user_signed_in? and current_user.id == @foto.album.user.id)
       @style = params[:style] ? params[:style] : 'normal'
       send_file @foto.imagem.path(@style)
     else
       render :nothing => true, :status => 403
     end
-  end            
+  end      
               
   def create
     @album ||= Album.find(params[:album_id])

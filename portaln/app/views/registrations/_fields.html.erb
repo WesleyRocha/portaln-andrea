@@ -4,7 +4,7 @@
 </div>             
                                    
 <% if user_signed_in? and current_user.may_criar_usuarios? %>
-	<div style="float: left; margin-left: 12%;">
+	<div style="float: left; margin-left: 22%;">
 	  <p><%= f.label :role_name %></p>
 	  <p><%= f.select :role_name, Permissions::ROLES %></p>
 	</div>

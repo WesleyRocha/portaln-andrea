@@ -8,7 +8,6 @@
 	<meta http-equiv="pragma" content="no-cache" />
 	<meta http-equiv="expires" content = "-1" />
 
-	<%= stylesheet_link_tag "layout" %>                   
 	<%= stylesheet_link_tag "smoothness/jquery-ui-1.8.custom" %>
 	
 	<%= stylesheet_link_tag "botoes" %>
@@ -29,36 +28,37 @@
 	<%= javascript_include_tag 'views/general' %>
 	<%= javascript_include_tag 'views/tags' %>
 
-	<title>Portal N</title>
+	<title>Andréa Bueno - Arquitetura e Interiores</title>
 </head>
-<body>                            
-	<div id="wrap"><!-- wrap -->
-		<div id="header"><!-- header -->
-			<div id="header-content"><!-- header-content -->	
-
-				<%= render :partial => 'layouts/logo' %>
-				               
-				<!-- pesquisa -->
-				<%= render :partial => 'pesquisa/form' %>
-				
-				<!-- Menu Tabs -->
-				<%= render :partial => 'layouts/menu' %>
-				
-			</div><!-- /header-content -->
-		</div><!-- /header -->
-		
-		<div id="nav">
-			<%= render :partial => 'sessions/logged_in'%>
-		</div>
-		
-		<div id="msg">
-			<%= render :partial => 'layouts/flash_notice' %>
-		</div>
-		
-    <%= render :partial => 'layouts/content' %>
-
-		<%= render :partial => 'layouts/footer' %>
-	</div><!-- /wrap -->
+<body>
+	<div id="conteiner">
+		<div id="moudura_top">
+			<div id="moudura_inf">
+				<div id="moudura_es">
+					<div id="moudura_di">
+						<div id="moudura_top_es">
+							<div id="moudura_top_di">
+								<div id="moudura_inf_es">
+									<div id="moudura_inf_di">
+										<div id="conteiner_int">
+											<%= render :partial => 'layouts/logo' %>
+											<div id="conteudo">
+												<div id="msg"><%= render :partial => 'layouts/flash_notice' %></div>
+												
+												<div class="texto">
+											    <%= render :partial => 'layouts/content' %>
+												</div>
+											</div>
+										</div>
+									</div>	                            
+								</div>	                            
+							</div>	                            
+						</div>	                            
+					</div>	                            
+				</div>	                            
+			</div>	                            
+		</div>	                            
+	</div>	                            
 </body>
 </html>
 

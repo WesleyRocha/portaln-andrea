@@ -15,7 +15,7 @@
 			<div class="<%= css %>">
 				<div id="imagem_id_<%= foto.id %>" 
 						 class="foto_thumb"
-						 style="background: no-repeat url('<%= foto.imagem.url(:thumb) %>'); margin-top: 5%;">
+	 					 style="background: no-repeat url('<%= "/images/#{foto.imagem.url(:thumb)}" %>'); margin-top: 5%;">						
 				</div>      
 				<div style="margin-left: 120px;">
 					<label><%= t('activerecord.attributes.foto.fotografo') %></label>

@@ -229,8 +229,8 @@ pt_BR:
     menu:
       home: "Home"
       escrever_noticia: "Escrever notícia"
-      noticias: "Notícias"
-      albuns: "Álbuns" #"Galeria de imagens"
+      noticias: "Matérias" #"Notícias"
+      albuns: "Portfólio" #Álbuns" #"Galeria de imagens"
       contato: "Contato"
       usuarios: "Usuários"     
       configuracoes: "Configurações"

@@ -18,7 +18,7 @@
 /* Login */
 #logged_in {
 	float: right;
-	margin: -25px 10px;
+	margin: -14px 0px;
 }             
 
 #login_panel {
@@ -83,12 +83,10 @@
 .noticias .data {
 	margin-bottom: 2px;
 	padding: 0px !important;
+	color: #777777;
 }             
 
 .noticias {
-	background-color: #FFFFFF;
-	border: 1px solid #F8F8FF;
- 	color: #222222;
 	padding: 0.4em 0.4em 3em 0.4em;
 }
 
@@ -98,14 +96,13 @@
 }
                                 
 .noticia_even {
-	background-color: #F8F8FF; 
 } 
 
 .noticia_odd {
-	background-color: #F5F5F5;
 }
 
 .noticia {
+	border-bottom: 1px dotted #777;
 }        
 
 .noticia .view {               
@@ -166,13 +163,14 @@
 /* tags */
                        
 .adicionar_tag {
-	padding: 70px 0px 0px 10px; 
+	padding: 68px 0px 0px 0px; 
 	float: left;
 }
 
 .tag {
 	background: url("/images/icons/tag_32.png") no-repeat scroll 0px 0px;
 	padding: 9px 8px 7px 35px;
+	color:black;
 }
 
 .tag_added {
@@ -194,7 +192,8 @@
 
 .tag_string {
 	background: url("/images/icons/tag_32.png") no-repeat scroll 0px 0px;
-	padding: 6px 35px;
+	padding: 6px 35px;           
+	color: #777777;
 }    
 
 .tag_string a {
@@ -600,7 +599,7 @@ li.box_foto_branco {
 }
 
 .data {
-	font-size: 9px;
+	font-size: 14px;
 }
 
 .clicavel {
@@ -715,8 +714,261 @@ li.box_foto_branco {
 .tooltip.bottom {
 }
 
+/* =================================================================================================================
+	Andrea layout 
+================================================================================================================= */
 
+.galleria-thumbnails .galleria-image{width:90px;height:60px;}
+.galleria-thumbnails-list{height:60px;}
+.galleria-thumb-nav-left,
+.galleria-thumb-nav-right{height:55px;}
 
+body {
+	background: url(/images/andrea-layout/bg_corpo.jpg) repeat 50% 0;
+	background-attachment: scroll;
+	margin: 0;
+	font: 90%/1.2em Helvetica, Arial, sans-serif;
+	min-width: 800px;
+	min-height: 580px;
+}
+#conteiner {
+	background: url(/images/andrea-layout/bg_topo.jpg) repeat-x 50% 0;
+	background-attachment: scroll;
+}
+#moudura_top {
+	background: #292C30 url(/images/andrea-layout/sombra_sup.jpg) repeat-x 50% 0;
+	background-attachment: scroll;
+	margin: 0 50px 0;
+}
+#moudura_inf {
+	background: url(/images/andrea-layout/sombra_inf.jpg) repeat-x 50% 100%;
+	background-attachment: scroll;
+}
+#moudura_es {
+	background: url(/images/andrea-layout/sombra_es.jpg) repeat-y 0 50%;
+	background-attachment: scroll;
+}
+#moudura_di {
+	background: url(/images/andrea-layout/sombra_di.jpg) repeat-y 100% 50%;
+	background-attachment: scroll;
+}
+#moudura_top_es {
+	background: url(/images/andrea-layout/sombra_sup_es.jpg) no-repeat 0 0;
+	background-attachment: scroll;
+}
+#moudura_top_di {
+	background: url(/images/andrea-layout/sombra_sup_di.jpg) no-repeat 100% 0;
+	background-attachment: scroll;
+}
+#moudura_inf_es {
+	background: url(/images/andrea-layout/sombra_inf_es.jpg) no-repeat 0 100%;
+	background-attachment: scroll;
+}
+#moudura_inf_di {
+	background: url(/images/andrea-layout/sombra_inf_di.jpg) no-repeat 100% 100%;
+	background-attachment: scroll;
+	min-height: 580px;
+}
+#conteiner_int{
+	padding: 19px 28px 45px;
+	color:#ddd;
+}
+#banner {
+	background: url(/images/andrea-layout/topo_bg.jpg) repeat-x 0 0;
+	background-attachment: scroll;
+	height: 88px;
+	position:relative;
+}
+#banner h1{
+	background: url(/images/andrea-layout/marca.gif) no-repeat 0 0;
+	padding: 20px 0 0 20px;
+	margin: 0;
+	display:block;
+	height: 40px;
+	width: 310px;
+	top: 20px;
+	left: 20px;
+	position:absolute;
+}
+#banner h1 spam{
+	display: none;
+}
+#banner #contato{
+	font: 85% Courier, "Courier New", monospace;
+	position:absolute;
+	color: #CAB1B1;
+	text-align:right;
+	right: 20px;
+	top: 16px;
+}
+#banner #menu{
+	font: 1em Courier, "Courier New", monospace;
+	position:absolute;
+	color: #CAB1B1;
+	text-align:right;
+	right: 20px;
+	top: 47px;
+}     
+#banner #menu ul {
+	list-style: none;
+}
+#banner #menu li {
+	display: inline;
+}
+#banner #menu a{
+	color: #CAB1B1;
+	text-decoration:none;
+}
+#banner #menu a:hover{
+	color: #ddd;
+	text-decoration:underline;
+}
+#banner #menu a.selecionado{
+	color: #ddd;
+}            
+#banner #menu li a#current {
+	text-decoration: underline;
+}
+#conteudo{
+	margin: 15px;
+}
+.imagem{
+	float:right;
+	margin-left: 15px;
+}
+h2 span {
+	color:#777;
+}
+a {
+	color:#ddd;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline
+}
+img{
+	border: 0;
+}
+.materia_linha{
+	border-bottom: 1px dotted #777;
+}
+.galeria{
+	background:url(/images/andrea-layout/teste.jpg) no-repeat 50% 50%;
+	height: 200px;
+	width: 200px;
+	margin: 15px;
+}
+label {
+	display:block;
+	font-weight:bold;
+	margin:5px 0;
+}
+
+input {
+	padding: 2px;
+	border:1px solid #eee;
+	font: normal 1em "Trebuchet MS", Tahoma, sans-serif;
+	color:#777;
+}
+textarea {
+	width:400px;
+	padding:2px;
+	font: normal 1em "Trebuchet MS", Tahoma, sans-serif;
+	border:1px solid #eee;
+	height:100px;
+	display:block;
+	color:#777;
+}
+input.button { 
+	margin: 0; 
+	font: bold 1em Arial, Sans-serif; 
+	background: #FFF url(/images/layout/gradientbg.jpg) repeat-x; 
+	padding: 2px 3px; 
+	color: #333;	
+	border: 1px solid #DADADA;	
+}
+
+/* footer */
+#footer {
+	clear: both;
+	margin: 0; padding: 0;
+	font: normal .95em/1.6em 'Trebuchet MS', Tahoma, Arial, sans-serif;
+	text-align: left;	
+}
+
+#footer h1, #footer p {	margin-left: 0; }
+
+#footer-content {	
+	border-top: 1px solid #EAEAEA;
+	margin: 0 auto;
+	padding-left: 15px;
+}
+#footer-content a {
+	text-decoration: none;
+	color: #777;	
+}
+#footer-content a:hover {
+	text-decoration: underline;
+	color: #333;
+}
+#footer-content ul {
+	list-style: none;
+	margin: 0; padding: 0;
+}
+#footer-content .col {
+	width: 32%;
+	padding: 0 5px 30px 0;	
+}
+#footer-content .col2 {
+	width: 33%;
+	padding: 0 0 30px 0;	
+}  
+
+/* start - table */
+table {
+	border-collapse: collapse;
+	margin: 10px 0px;	
+}
+th strong {
+	color: black;
+}
+th {
+	background: #680000 ;
+	height: 29px;
+	padding-left: 11px;
+	padding-right: 11px;
+	color: #fff;
+	text-align: left;
+}
+tr {
+	height: 30px;
+}
+td {
+	padding-left: 11px;
+	padding-right: 11px;
+	/* border-left: 1px solid #FFE1C3; */
+	color: black;
+}
+td.first,th.first {
+	border-left: 0px;
+}
+tr.row-a {
+	background: #F8F8F8;
+}
+tr.row-b {
+	background: #EFEFEF;
+}
+/* end - table */
+
+/* alignment classes */
+.float-left  { float: left; }
+.float-right { float: right; }
+.align-left  { text-align: left; }
+.align-right {	text-align: right; }
+
+/* additional classes */
+.clear { clear: both; }
+.gray  { color: #BFBFBF; }
 
 
 

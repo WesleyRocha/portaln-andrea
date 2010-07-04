@@ -1,6 +1,13 @@
-<h1 id="logo">
+<div id="banner">
 	<% link_to(root_path) do %>
-		Portal<span class="gray">N</span>
+		<h1>
+	  		<spam>Andréa Bueno - Arquitetura e Interiores</spam>
+		</h1>
 	<% end %>
-</h1>	
-<h2 id="slogan">Awesome applications</h2>		
+	<div id="contato">
+		<div id="nav">
+			<%= render :partial => 'sessions/logged_in'%></div>
+			andreabueno.arquitetura@gmail.com <br/> (55 61) 9988-2021
+		</div>
+  <%= render :partial => 'layouts/menu' %>
+</div>

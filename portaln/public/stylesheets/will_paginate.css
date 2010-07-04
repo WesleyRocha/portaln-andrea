@@ -7,7 +7,7 @@
 .pagination a {
 	text-decoration: none;
 	border: 1px solid #AAAADD;
-	color: #009900 /*#336699*/;
+	color: #777777;
 	margin: 0 0 0 1px;
 	padding: 0.05em 0.25em;
 }
@@ -17,9 +17,9 @@
 }
 
 .pagination .current{
-	border: 1px solid #009933 /*#336699*/;
-	background: #72A545 /*#336699*/;
-	color: #FFFFFF;
+	border: 1px solid #DDDDDD;
+	background: #DDDDDD;
+	color: black;
 	margin: 0 0 0 1px;
 	padding: 0.05em 0.25em;
 }
