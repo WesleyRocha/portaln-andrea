@@ -545,7 +545,7 @@ li.box_foto_branco {
 
 #busca-padrao {
 	float: left;
-	margin-left: 15%;
+	margin-left: 36%;/*15%*/
 	width: 25%; 
 }         
 
@@ -556,7 +556,7 @@ li.box_foto_branco {
 }
 
 #busca-padrao .search-button a {
-	padding: 2px 10px 6px 7px !important;
+	padding: 2px 4px 6px 7px !important;
 }
 
 #busca-padrao .query-field {
@@ -567,7 +567,7 @@ li.box_foto_branco {
 #busca-padrao .query-field input {
 	width: 200px !important;
 	margin: 15px !important;
-	padding: 3px !important;
+	padding: 4px !important;
 }
   
 .titulo {
