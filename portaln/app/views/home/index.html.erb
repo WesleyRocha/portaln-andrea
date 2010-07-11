@@ -1,8 +1,26 @@
 <%= javascript_include_tag 'views/home/index.js' %>
 
-<h1>Home</h1>
-                    
+<% if @album %>     
+	<span id="load">
+		<br/>
+		<%= image_tag 'load.gif'%>&nbsp;<%= t('portaln.upload.load') %>
+	</span>
 
+	<div id="fotos" style="display: none;">
+		<% if @fotos and (not @fotos.empty?) %>
+			<%= render :partial => 'albuns/galerias/gallery_view', :locals => {:fotos => @fotos} %>
+		<% else %>             
+			<div id="sem_imagem">
+				<h2>Nenhuma imagem encontrada para este álbum!</h2>
+			</div>
+		<% end %>     
+	</div>
+<% else %>
+	<br/>
+	<i><%= t('portaln.albuns.nenhum_encontrado') %></i>
+	<div style="clear: both;"></div>
+	<br/>
+<% end %>
 
 
 

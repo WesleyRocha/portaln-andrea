@@ -17,18 +17,33 @@
   <title>Portal N</title>
 </head>
 <body>      
-  <div id="wrap"><!-- wrap -->
-		<div id="header"><!-- header -->
-			<div id="header-content"><!-- header-content -->	
-
-				<%= render :partial => 'layouts/logo' %>
-				
-			</div><!-- /header-content -->
-		</div><!-- /header -->
-		
-    <%= render :partial => 'layouts/content' %>
-
-		<%= render :partial => 'layouts/footer' %>
-	</div><!-- /wrap -->
+	<div id="conteiner">
+		<div id="moudura_top">
+			<div id="moudura_inf">
+				<div id="moudura_es">
+					<div id="moudura_di">
+						<div id="moudura_top_es">
+							<div id="moudura_top_di">
+								<div id="moudura_inf_es">
+									<div id="moudura_inf_di">
+										<div id="conteiner_int">
+											<%= render :partial => 'layouts/logo' %>
+											<div id="conteudo">
+												<div class="texto">
+											    <%= render :partial => 'layouts/content' %>
+												</div>
+												
+												<%= render :partial => 'layouts/footer' %>
+											</div>
+										</div>
+									</div>	                            
+								</div>	                            
+							</div>	                            
+						</div>	                            
+					</div>	                            
+				</div>	                            
+			</div>	                            
+		</div>	                            
+	</div>	                            
 </body>
 </html>

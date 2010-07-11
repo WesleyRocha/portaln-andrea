@@ -36,7 +36,11 @@
 #photos { visibility: hidden; }
 
 /* GALLERY CONTAINER */
-.gallery { background: black; border: 1px solid #aaa; padding: 5px;}
+.gallery { 
+	background: black; 
+	border: none;/*1px solid #aaa*/ 
+	padding: 5px;
+}
 
 /* LOADING BOX */
 .loader { background: url('/images/load.gif') center center no-repeat #ddd; }

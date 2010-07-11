@@ -1,26 +1,27 @@
 <div id="album" class="album">
-	<%= hidden_field_tag 'album_id', @album.id %>
-	<h1>
-		<%= link_to "#{h @album.titulo}", album_path(@album) %>
-	</h1>                 
+	<div id="conteudo">
+		<%= hidden_field_tag 'album_id', @album.id %>
+		<h1>
+			<%= link_to "#{h @album.titulo}", album_path(@album) %>
+		</h1>                 
 	                                    
-	<div>
-		<i>
-			Autor:&nbsp;
-			<span class="autor"><%= @album.autor.username %></span>
-		</i>
-	</div>
-	<%= render :partial => 'geral/data', :locals => {:object => @album} %>
+		<div>
+			<i>
+				Autor:&nbsp;
+				<span class="autor"><%= @album.autor.username %></span>
+			</i>
+		</div>
+		<%= render :partial => 'geral/data', :locals => {:object => @album} %>
 	
-	<% if user_signed_in? and current_user.may_editar_album? @album %>
-		<%= render :partial => 'albuns/opcoes', :locals => {:album => @album} %>
-	<% end %>
+		<% if user_signed_in? and current_user.may_editar_album? @album %>
+			<%= render :partial => 'albuns/opcoes', :locals => {:album => @album} %>
+		<% end %>
 	                                                                       
-	<span id="load">
-		<br/>
-		<%= image_tag 'load.gif'%>&nbsp;<%= t('portaln.upload.load') %>
-	</span>
-
+		<span id="load">
+			<br/>
+			<%= image_tag 'load.gif'%>&nbsp;<%= t('portaln.upload.load') %>
+		</span>
+	</div>
 	<div id="fotos" style="display: none;">
 		<% if @fotos and (not @fotos.empty?) %>
 			<%= render :partial => 'albuns/galerias/gallery_view', :locals => {:fotos => @fotos} %>
@@ -30,17 +31,20 @@
 			</div>
 		<% end %>     
 	</div>
-	
-	<% unless @album.tags_string.empty? %>
-		<div class="tag_string">
-			<% @album.tag_list.each do |tag| %>
-				<%= link_to tag, :controller => :albuns, :tag => tag %>&nbsp;
-			<% end %>
-		</div>   
-	<% end %>
+	<div style="margin: 15px;">
+		<% unless @album.tags_string.empty? %>
+			<div class="tag_string">
+				<% @album.tag_list.each do |tag| %>
+					<%= link_to tag, :controller => :albuns, :tag => tag %>&nbsp;
+				<% end %>
+			</div>   
+		<% end %>
+	</div>                                                  
 	
 </div>                                                               
   
 <div style="clear: both;"></div>
-<br/>
-<%= link_to "#{t('portaln.voltar')}", albuns_path %>
+<div style="margin: 15px;">
+	<br/>
+	<%= link_to "#{t('portaln.voltar')}", albuns_path %>
+</div>

@@ -1,25 +1,27 @@
-<h1>
-	<%= t("portaln.albuns.listagem") %>
-	<% if params[:tag] %>
-		<%= t('portaln.albuns.tag.sobre') %>&nbsp;<%= params[:tag] %>
+<div id="conteudo">
+	<h1>
+		<%= t("portaln.albuns.listagem") %>
+		<% if params[:tag] %>
+			<%= t('portaln.albuns.tag.sobre') %>&nbsp;<%= params[:tag] %>
+		<% end %>
+	</h1>                  
+
+	<% if user_signed_in? %>
+		<%= link_to t('portaln.albuns.criar_novo'), new_album_path %>
+		<br/>
+	<% end %>     
+
+	<% if user_signed_in? %>
+		<%= render :partial => 'albuns/pesquisa' %>
+	<% end %>                             
+
+	<% if @albuns and (not @albuns.empty?) %>
+		<%= render :partial => 'albuns/lista_fotos_grandes', :locals => {:albuns => @albuns} %>
+
+	<% else %>
+		<br/>
+		<i><%= t('portaln.albuns.nenhum_encontrado') %></i>
+		<div style="clear: both;"></div>
+		<br/>
 	<% end %>
-</h1>                  
-
-<% if user_signed_in? %>
-	<%= link_to t('portaln.albuns.criar_novo'), new_album_path %>
-	<br/>
-<% end %>     
-
-<% if user_signed_in? %>
-	<%= render :partial => 'albuns/pesquisa' %>
-<% end %>                             
-
-<% if @albuns and (not @albuns.empty?) %>
-	<%= render :partial => 'albuns/lista_fotos_grandes', :locals => {:albuns => @albuns} %>
-
-<% else %>
-	<br/>
-	<i><%= t('portaln.albuns.nenhum_encontrado') %></i>
-	<div style="clear: both;"></div>
-	<br/>
-<% end %>
+</div>

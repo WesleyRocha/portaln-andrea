@@ -228,7 +228,7 @@ pt_BR:
 
     menu:
       home: "Home"
-      escrever_noticia: "Escrever notícia"
+      escrever_noticia: "Escrever matéria"
       noticias: "Matérias" #"Notícias"
       albuns: "Portfólio" #Álbuns" #"Galeria de imagens"
       contato: "Contato"
@@ -312,17 +312,17 @@ pt_BR:
       
     # Relacionado a noticias
     noticias:              
-      carregando_ultimas: "Carregando últimas notícias"
-      ultimas: "Últimas notícias"
+      carregando_ultimas: "Carregando últimas matérias"
+      ultimas: "Últimas matérias"
       mensagens:
-        criada: 'Notícia criada com sucesso.'
-        atualizada: 'Notícia atualizada com sucesso.'
+        criada: 'Matéria criada com sucesso.'
+        atualizada: 'Matéria atualizada com sucesso.'
       tag:
         sobre: "sobre" 
-      listagem: "Notícias"
-      nova: "Nova notícia"
-      editar: "Editando notícia"
-      nenhuma_encontrada: "Nenhuma notícia encontrada."
+      listagem: "Matérias"
+      nova: "Nova matéria"
+      editar: "Editando matéria"
+      nenhuma_encontrada: "Nenhuma matéria encontrada."
       sem_resumo: "Não incluir resumo"
       carregando_nuvem_tags: "Carregando nuvem de tags"
       nuvem_tags: "Nuvem de tags"

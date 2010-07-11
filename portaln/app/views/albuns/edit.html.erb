@@ -1,9 +1,11 @@
-<h1 id="album_title"><%= t("portaln.albuns.editar") %></h1>
+<div id="conteudo">
+	<h1 id="album_title"><%= t("portaln.albuns.editar") %></h1>
 
-<%= render :partial => 'albuns/form' %>
+	<%= render :partial => 'albuns/form' %>
 
-<%= render :partial => 'fotos/upload' %>
+	<%= render :partial => 'fotos/upload' %>
                   
-<br/>
+	<br/>
 
-<%= link_to "#{t('portaln.voltar')}", albuns_path %>
+	<%= link_to "#{t('portaln.voltar')}", albuns_path %>
+</div>

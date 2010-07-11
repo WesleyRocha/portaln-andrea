@@ -1,18 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @gerais = Noticia.pesquisa_paginada({
-      :page_size => 5,
-      :tag => 'geral'
-    })    
-    
-    @saude = Noticia.pesquisa_paginada({
-      :page_size => 5,
-      :tag => 'saúde'
-    })
-    
-    @tecnologia = Noticia.pesquisa_paginada({
-      :page_size => 5,
-      :tag => 'tecnologia'
-    })
+   @album = Album.find(
+    :last,
+    :conditions => ["workflow_state = ?", "publicado"]
+   )        
+   @fotos = @album.fotos_publicadas if @album
   end
 end
