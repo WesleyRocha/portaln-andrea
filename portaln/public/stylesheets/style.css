@@ -545,7 +545,7 @@ li.box_foto_branco {
 
 #busca-padrao {
 	float: left;
-	margin-left: 36%;/*15%*/
+	margin-left: 73%;/*15%*/
 	width: 25%; 
 }         
 
@@ -673,7 +673,10 @@ li.box_foto_branco {
 .tam8 p, .tam7 li{ font-size: 145% }
 .tam9 p, .tam7 li{ font-size: 160% }
 
-#font_size {      
+#font_size {
+	float: right;
+	margin-top: -15px;
+	width: 15%;
 }
 
 #font_size ul { 

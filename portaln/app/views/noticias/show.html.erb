@@ -22,7 +22,7 @@
 	</div>
   
 	<% unless @noticia.tags_string.empty? %>
-		<div class="tag_string">
+		<div class="tag_string" style="margin: 15px 0px;">
 			<% @noticia.tag_list.each do |tag| %>
 				<%= link_to tag, :controller => :noticias, :tag => tag %>&nbsp;
 			<% end %>

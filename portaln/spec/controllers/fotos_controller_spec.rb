@@ -418,8 +418,6 @@ describe FotosController do
   end
   
   it "nao deveria permitir carregar fotos nao publicadas" do
-    sign_in users(:test)
-
     album = Factory.create :album, :user_id => users(:test).id
     foto = Factory.create :foto, :album_id => album.id
     

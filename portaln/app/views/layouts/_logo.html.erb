@@ -3,11 +3,8 @@
 		<h1>
 	  		<spam>Andréa Bueno - Arquitetura e Interiores</spam>
 		</h1>
-	<% end %>           
-	<div id="contato">
-		<div id="nav">
-			<%= render :partial => 'sessions/logged_in'%></div>
-			andreabueno.arquitetura@gmail.com <br/> (55 61) 9988-2021
-		</div>
+	<% end %>            
+	<%= render :partial => 'sessions/logged_in'%>
+	<%= render :partial => 'pesquisa/form' %>
   <%= render :partial => 'layouts/menu' %>
 </div>
