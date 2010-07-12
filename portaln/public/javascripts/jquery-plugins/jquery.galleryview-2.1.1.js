@@ -26,7 +26,7 @@ var window_loaded = false;
 		var iterator = 0;		// INT - Currently visible panel/frame
 		var item_count = 0;		// INT - Total number of panels/frames
 		var slide_method;		// STRING - indicator to slide entire filmstrip or just the pointer ('strip','pointer')
-		var theme_path;			// STRING - relative path to theme directory
+		var theme_path;// STRING - relative path to theme directory
 		var paused = false;		// BOOLEAN - flag to indicate whether automated transitions are active
 		
 	// Element dimensions
