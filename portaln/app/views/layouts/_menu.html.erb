@@ -4,6 +4,10 @@
 			<%= link_to t('portaln.menu.home'), root_path, :id => check_tab?({:home => :all }) %>
 			&nbsp;.&nbsp;
 		</li>
+		<li>
+			<%= link_to t('portaln.menu.biografia'), biografia_path, :id => check_tab?({:biografia => :all }) %>
+			&nbsp;.&nbsp;
+		</li>
 		<% if user_signed_in? %>
 			<li>
 				<%= link_to t('portaln.menu.escrever_noticia'), new_noticia_path, :id => check_tab?({

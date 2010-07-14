@@ -234,6 +234,7 @@ pt_BR:
       contato: "Contato"
       usuarios: "Usuários"     
       configuracoes: "Configurações"
+      biografia: "Perfil"
     
     erros:
       permissao_negada: "Você tentou acessar um recurso sem autorização! Nossos seguraças já foram alertados!"

@@ -45,6 +45,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :fotos, :only => :create
   map.resources :contatos, :only => [:index, :create]
   map.resources :configuracoes, :only => [:index, :update]
+  map.resources :biografia, :only => [:index]
   
   map.devise_for :users, :path_names => { 
     :sign_in => 'login', 

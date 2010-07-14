@@ -983,7 +983,11 @@ tr.row-b {
 	color: black;
 }
 
-
+.biografia {
+	text-align: justify;
+	line-height: 180%;
+	padding-right: 30%;
+}
 
 
 
