@@ -800,7 +800,7 @@ body {
 	left: 20px;
 	position:absolute;
 }
-#banner h1 spam{
+#banner h1 span{
 	display: none;
 }
 #banner #contato{

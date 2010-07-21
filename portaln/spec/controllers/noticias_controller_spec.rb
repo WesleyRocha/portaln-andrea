@@ -179,6 +179,7 @@ describe NoticiasController do
     response.should be_success
     assigns[:noticia].should_not be_nil
     assigns[:noticia].id.should == noticia.id
+    assigns[:anexos].should_not be_nil
   end                                        
   
   it "nao deveria poder carregar uma noticia de outro usuario para edicao" do
@@ -385,7 +386,6 @@ describe NoticiasController do
     assigns[:noticia].tag_list.should_not be_nil
     assigns[:noticia].tag_list.length.should == 0
   end
-  
   
   it "deveria apagar uma noticia" do
     sign_in users(:test)

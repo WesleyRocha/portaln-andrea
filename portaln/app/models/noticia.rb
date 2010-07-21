@@ -14,6 +14,7 @@ class Noticia < ActiveRecord::Base
      
   acts_as_taggable
   belongs_to :user
+  has_many :anexos, :order => 'created_at asc'
 
   alias_column :original => 'user_id', :new => 'autor_id'
   alias_column_method :original => 'user', :new => 'autor'

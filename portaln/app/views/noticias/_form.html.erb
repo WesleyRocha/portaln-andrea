@@ -23,7 +23,11 @@
 	    <%= f.text_area :conteudo %>
 	  </p>
 	</div>
-	<div style="clear: both;"></div>
+	<div style="clear: both;"></div>   
+	
+	<% if params[:action] == 'edit' %>
+		<%= render 'anexos/upload' %>
+	<% end %>
 
 	<%= render :partial => 'tags/tags_form' %>
 	

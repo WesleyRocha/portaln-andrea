@@ -37,6 +37,12 @@ ActionController::Routing::Routes.draw do |map|
     '/images/fotos/show/:id/:style',
     :controller => :fotos,
     :action => :show
+  )                                         
+  
+  map.anexos_download(
+    '/anexos/download/:id/:style',
+    :controller => :anexos,
+    :action => :download
   )
   
   map.resources :noticias         
@@ -46,6 +52,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :contatos, :only => [:index, :create]
   map.resources :configuracoes, :only => [:index, :update]
   map.resources :biografia, :only => [:index]
+  map.resources :anexos, :only => [:create, :destroy]
   
   map.devise_for :users, :path_names => { 
     :sign_in => 'login', 

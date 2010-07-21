@@ -7,6 +7,7 @@ module PortalN
   # Path do diretorio que armazena a estrutura das fotos da galeria de imagens
   # padrao: /public/system
   IMAGENS_PATH = File.join(Rails.root, 'public', 'system')
+  ANEXOS_PATH = File.join(Rails.root, 'public', 'system')
   
   HOST = 'http://localhost:3000'
   

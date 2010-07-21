@@ -16,7 +16,7 @@ class TagFinder
                          
   private
   def self.retirar_acentos campo
-    "lower(to_ascii(convert_to(#{campo}, 'latin1'), 'latin1'))"
+    "translate(lower(#{campo}), 'áâãéêẽíóôõú', 'aaaeeeiooou')"
   end
   
 end

@@ -1,0 +1,73 @@
+<br/>
+
+<%= javascript_include_tag 'views/anexos/upload' %>  
+<div class="upload">
+	<%= hidden_field_tag :uploadify_path, path_to_resource("flash/uploadify.swf") %>
+	<%= hidden_field_tag :img_cancel_path, path_to_resource("images/icons/cancel_16.png") %>
+	<%= hidden_field_tag :button_text, t('portaln.upload.escolher_anexos') %>
+	<%= hidden_field_tag :controller_path, 
+											 url_for(
+											 	:controller => :anexos, 
+												:action => :create, 
+												:noticia_id => @noticia.id
+											 )%>                                    
+	<% session_key_name = ActionController::Base.session_options[:key] %>										
+	<%= hidden_field_tag :session_key_name, session_key_name %>
+	<%= hidden_field_tag :session_key_value, u(cookies[session_key_name]) %>
+	<%= hidden_field_tag :load_icon_path, path_to_resource("images/load.gif") %>
+	<%= hidden_field_tag :load_text, t('portaln.upload.load_anexos') %>
+	<%= hidden_field_tag :recarregar_anexos_path, 
+											 url_for(
+											   :controller => :anexos,
+											   :action => :all_by_noticia,
+												 :noticia_id => @noticia.id
+											 )%>
+	
+	<div style="float: left;">
+		<input type="file" name="upload_files" id="upload_files" />                  
+	</div>
+  
+	<div class="buttons">                      
+	  <a id="link_upload" class="positive" style="margin-left: 5px" href="#">
+	    <%= image_tag 'icons/up_32.png' %>
+	    <%= t('portaln.upload.enviar_arquivos') %>
+	  </a>
+	  <a id="link_clear" class="negative" href="#">
+	    <%= image_tag 'icons/stop_32.png' %>
+	    <%= t('portaln.upload.cancelar_uploads') %>
+	  </a>
+	</div>
+
+	<div id="fileQueue"></div>
+
+	<div style="clear: both;"></div>
+	                                          
+	<div id="anexos_container">
+		<%= render :partial => 'anexos/lista_edicao' %>
+	</div>                                  
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

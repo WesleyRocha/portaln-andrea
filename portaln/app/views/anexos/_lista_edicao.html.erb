@@ -1,0 +1,26 @@
+<div id="lista_anexos">             
+	<%= hidden_field_tag 'noticia_id', @noticia.id %>
+	<ul id="lista_anexos_carregados">
+		
+		<% if @anexos and (not @anexos.empty?) %>
+	    <% @anexos.each_with_index do |anexo, index| %>
+	      <li id="li_<%= anexo.id %>">
+					<%= link_to anexo.arquivo_file_name, '/' + anexo.arquivo.url(:original) %><br/>
+					<%= text_field_tag "url_path", '/' + anexo.arquivo.url(:original), 
+							:style => "width: 60%;", 
+							:id => "url_#{anexo.id}",
+							:class => "selecionar_ao_clicar" %>
+					 <% link_to({:controller => :anexos, :action => :destroy, :id => anexo.id, :noticia_id => @noticia.id}, 
+											{:method => :delete, :confirm => "#{t('portaln.confirmacao_apagar')}"}) do %>
+					 	<%= image_tag 'icons/cancel_16.png' %>
+					 <% end %>
+	      </li>
+			<% end %>
+	    <div style="clear:both;">
+		
+	  <% else %>
+	  	<i><%= t('portaln.noticias.nenhum_anexo_encontrado') %></i>
+	  <% end %>
+	
+	</ul>
+</div>

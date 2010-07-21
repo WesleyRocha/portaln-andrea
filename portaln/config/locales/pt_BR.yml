@@ -256,7 +256,9 @@ pt_BR:
                                      
     upload:
       escolher_fotos: "Escolher Fotos"
+      escolher_anexos: "Escolher Anexos"
       load: "Carregando imagens"  
+      load_anexos: "Carregando anexos"
       enviar_arquivos: "Enviar arquivos"
       cancelar_uploads: "Cancelar uploads"                       
                           
@@ -315,9 +317,13 @@ pt_BR:
     noticias:              
       carregando_ultimas: "Carregando últimas matérias"
       ultimas: "Últimas matérias"
+      nenhum_anexo_encontrado: "Nenhum anexo encontrado."
       mensagens:
         criada: 'Matéria criada com sucesso.'
         atualizada: 'Matéria atualizada com sucesso.'
+        anexo:
+          removido: "Anexo removido com sucesso."
+        
       tag:
         sobre: "sobre" 
       listagem: "Matérias"

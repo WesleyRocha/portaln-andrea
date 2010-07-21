@@ -196,6 +196,17 @@ describe Noticia do
     noticias.length.should == 0
   end
   
+  it "tags_string deveria retornar uma string com as tags separadas por virgula" do
+    tags = ["tag1", "tag2", "tag3"]
+    
+    noticia = Factory.create :noticia
+    noticia.save.should be_true  
+    noticia.tag_list = tags
+    noticia.save.should be_true
+    
+    noticia.tags_string.should == tags.join(", ")
+  end
+  
 end
   
 

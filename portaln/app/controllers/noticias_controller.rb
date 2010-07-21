@@ -1,5 +1,9 @@
 class NoticiasController < ApplicationController
   
+  # ====================================================================================================================
+  # Filtros  
+  # ====================================================================================================================
+  
   before_filter :authenticate_user!, :except => [:index, :show, :ultimas]
                            
   # Filtro que verifica se o usuario pode editar a noticia selecionada
@@ -14,9 +18,21 @@ class NoticiasController < ApplicationController
     @noticia = Noticia.find(controller.params[:id])
     raise Aegis::PermissionError if (not controller.user_signed_in?) and @noticia.nova?
   end
+  
+  before_filter :only => [:new, :create] do |controller|
+    controller.current_user.may_criar_noticia!
+  end
+           
+  # ====================================================================================================================
+  # Metodos de action
+  # ====================================================================================================================
 
-  def index
-    @noticias = pesquisa_paginada(Noticia, 'publicada', params)
+  def index                                                     
+    if user_signed_in?
+      @noticias = pesquisa_paginada(Noticia, 'publicada', params, current_user.may_criar_noticia?)
+    else                                                                                          
+      @noticias = pesquisa_paginada(Noticia, 'publicada', params)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -62,6 +78,7 @@ class NoticiasController < ApplicationController
 
   def edit
     @noticia ||= Noticia.find(params[:id])
+    @anexos = @noticia.anexos
   end
 
   def create

@@ -29,15 +29,22 @@ class ApplicationController < ActionController::Base
     return 
   end              
   
-  def pesquisa_paginada(classe, status_permitido, params)
-    @tag = params[:tag]
+  def pesquisa_paginada(classe, status_permitido, params, workflow_state_condition = true)
+    @tag = params[:tag]        
+    
+    if params[:workflow_state] and user_signed_in? and workflow_state_condition
+      status = params[:workflow_state]
+    else
+      status = status_permitido
+    end
+    
     pesquisa = {
       :page => params[:page],   
       # Garante que so fara join com Tag caso necessario
       :tag => (@tag ? @tag : nil),                     
       
       # Garante que apenas usuarios logados pesquisem por outros status
-      :workflow_state => ((params[:workflow_state] and user_signed_in?) ? params[:workflow_state] : status_permitido),
+      :workflow_state => status,
       :page_size => params[:page_size]
     }                                             
 
