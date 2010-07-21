@@ -5,6 +5,7 @@
 		</h1>
 	<% end %>            
 	<%= render :partial => 'sessions/logged_in'%>
-	<%= render :partial => 'pesquisa/form' %>
+	<!-- Pesquisa desabilitada enquando o sphinx nao eh instalado -->
+	<% render :partial => 'pesquisa/form' %>
   <%= render :partial => 'layouts/menu' %>
 </div>

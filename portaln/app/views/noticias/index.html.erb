@@ -1,9 +1,17 @@
 <%= javascript_include_tag 'views/noticias/index.js' %>
 
-<h1>
-	<%= t("portaln.noticias.listagem") %>
-	<% if params[:tag] %>
-		<%= t('portaln.noticias.tag.sobre') %>&nbsp;<%= params[:tag] %>
+<h1>                                  
+	<% if params[:tag] == 'materia' %>
+		Matérias
+	<% elsif params[:tag] == 'publicacao' %>
+		Publicações
+	<% elsif params[:tag] == 'dica'%>
+		Dicas
+	<% else %>
+		<%= t("portaln.noticias.listagem") %>
+		<% if params[:tag] %>
+			<%= t('portaln.noticias.tag.sobre') %>&nbsp;<%= params[:tag] %>
+		<% end %>
 	<% end %>
 	
 	<div class="feed_in_title">

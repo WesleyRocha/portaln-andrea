@@ -17,9 +17,7 @@
 		  </li>
 		<% end %>
 		<li>
-			<%= link_to t('portaln.menu.noticias'), noticias_path, :id => check_tab?({
-				:noticias => [:index, :show, :edit]
-			}) %>
+			<%= link_to t('portaln.menu.noticias'), materias_path %>
 			&nbsp;.&nbsp;
 		</li>
 		<li>
@@ -27,7 +25,15 @@
 				:albuns => [:index, :show, :edit, :new]
 			}) %>
 			&nbsp;.&nbsp;
-		</li>
+		</li>                     
+		<li>
+			<%= link_to 'Publicações', publicacoes_path %>
+			&nbsp;.&nbsp;
+		</li>                     
+		<li>
+			<%= link_to 'Dicas', dicas_path %>
+			&nbsp;.&nbsp;
+		</li>                     
 		<li>
 			<%= link_to t('portaln.menu.contato'), contatos_path, :id => check_tab?({
 				:contatos => :all

@@ -44,8 +44,29 @@ ActionController::Routing::Routes.draw do |map|
     :controller => :anexos,
     :action => :download
   )
+                         
+  map.materias(
+    '/materias',
+    :controller => :noticias,
+    :action => :index,
+    :tag => 'materia'
+  )                  
   
-  map.resources :noticias         
+  map.publicacoes(
+    '/publicacoes',
+    :controller => :noticias,
+    :action => :index,
+    :tag => 'publicacao'
+  )
+
+  map.dicas(
+    '/dicas',
+    :controller => :noticias,
+    :action => :index,
+    :tag => 'dica'
+  )
+  
+  map.resources :noticias             
   map.resources :registrations, :only => [:new, :create]
   map.resources :albuns
   map.resources :fotos, :only => :create
