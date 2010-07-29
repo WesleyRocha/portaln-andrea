@@ -112,7 +112,11 @@
 	color: #222222;
 	padding: 1em;
 	font: normal 110% 'Trebuchet MS',Verdana,Arial,Helvetica,sans-serif;
-}                 
+}             
+
+.noticia .view a {
+	color: blue;
+}    
 
 #pesquisa_noticias {
 	margin-top: 0px;
@@ -980,6 +984,10 @@ tr.row-b {
 .gray  { color: #BFBFBF; }
 
 .fileName {
+	color: black;
+}                
+
+.percentage {
 	color: black;
 }
 

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100604225327) do
+ActiveRecord::Schema.define(:version => 20100718005212) do
 
   create_table "albuns", :force => true do |t|
     t.string   "titulo"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(:version => 20100604225327) do
   end
 
   add_index "albuns", ["titulo"], :name => "index_albuns_on_titulo", :unique => true
+
+  create_table "anexos", :force => true do |t|
+    t.integer  "noticia_id"
+    t.string   "arquivo_file_name"
+    t.string   "arquivo_content_type"
+    t.integer  "arquivo_file_size"
+    t.datetime "arquivo_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "configuracoes", :force => true do |t|
     t.integer  "quem_alterou_id"
@@ -55,7 +65,6 @@ ActiveRecord::Schema.define(:version => 20100604225327) do
     t.string   "imagem_content_type"
     t.integer  "imagem_file_size"
     t.datetime "imagem_updated_at"
-    t.boolean  "delta",               :default => true, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -117,6 +126,5 @@ ActiveRecord::Schema.define(:version => 20100604225327) do
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
   add_index "users", ["username"], :name => "index_users_on_username", :unique => true
-  
-  execute("CREATE FUNCTION to_ascii(bytea, name) RETURNS text STRICT AS 'to_ascii_encname' LANGUAGE internal;")
+
 end

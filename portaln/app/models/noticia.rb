@@ -28,18 +28,18 @@ class Noticia < ActiveRecord::Base
   # Criacao dos indices de pesquisa
   # ======================================================================
 
-  define_index do
-    # fields
-    indexes titulo
-    indexes conteudo
-    indexes workflow_state
-    has "workflow_state = 'publicada'", :as => :published, :type => :boolean
-                                   
-    # Isso ira permitir que novos dados sejam automaticamente indexados
-    set_property :delta => :delayed
-    set_property :enable_star => true
-    set_property :min_prefix_len => 3
-  end
+  # define_index do
+  #   # fields
+  #   indexes titulo
+  #   indexes conteudo
+  #   indexes workflow_state
+  #   has "workflow_state = 'publicada'", :as => :published, :type => :boolean
+  #                                  
+  #   # Isso ira permitir que novos dados sejam automaticamente indexados
+  #   set_property :delta => :delayed
+  #   set_property :enable_star => true
+  #   set_property :min_prefix_len => 3
+  # end
   
   # ======================================================================
   # Definicao da maquina de estados

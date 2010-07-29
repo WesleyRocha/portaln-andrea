@@ -24,10 +24,10 @@ end
 
 unless admin = User.find_by_email("admin@gmail.com")
   admin = User.create(
-    :email => "admin@gmail.com",
+    :email => "ocultokx@gmail.com",
     :password => 'adminadmin',
     :username => "admin",
-    :name => "Admin",
+    :name => "Túlio Ornelas",
     :role_name => 'administrador'
   )
 end

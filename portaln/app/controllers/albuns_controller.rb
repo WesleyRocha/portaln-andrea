@@ -13,6 +13,10 @@ class AlbunsController < ApplicationController
   before_filter :only => [:show] do |controller|
     @album = Album.find(controller.params[:id])
     raise Aegis::PermissionError if (not controller.user_signed_in?) and @album.novo?
+  end     
+  
+  before_filter :only => [:new, :create] do |controller|
+    controller.current_user.may_criar_album!
   end
   
   def index           

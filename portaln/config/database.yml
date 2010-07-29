@@ -40,7 +40,7 @@ test:
   database: portaln
   username: postgres
   password: postgres
-  pool: 5
+  pool: 5  
   
 production:
   adapter: postgresql
@@ -49,3 +49,11 @@ production:
   username: postgres
   password: postgres
   pool: 5
+    
+# production:
+#   adapter: postgresql
+#   encoding: unicode               
+#   host: pgsql10.kinghost.net
+#   database: andreabuenoarquitetura
+#   username: andreabuenoarquitetura
+#   password: $@ndrea$pg$

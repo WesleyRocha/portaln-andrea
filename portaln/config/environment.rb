@@ -34,17 +34,17 @@ Rails::Initializer.run do |config|
                                   :source  => "http://gemcutter.org", 
                                   :lib     => 'thinking_sphinx'
                                  
-  config.gem "delayed_job",       :version => '<2'
+  #config.gem "delayed_job",       :version => '<2'
                                  
-  config.gem "ts-delayed-delta",  :version => '~> 1.0.4', 
-                                  :source  => 'http://gemcutter.org', 
-                                  :lib     => 'thinking_sphinx/deltas/delayed_delta'
+  #config.gem "ts-delayed-delta",  :version => '~> 1.0.4', 
+  #                                :source  => 'http://gemcutter.org', 
+  #                                :lib     => 'thinking_sphinx/deltas/delayed_delta'
   
   config.gem "factory_girl",      :version => '~> 1.2.4',  
                                   :source  => "http://gemcutter.org"
                                  
   config.gem "tlsmail",           :version => '~> 0.0.1'
-
+  
   config.gem "rmagick",           :version => '~> 2.13.1'
   
   # Agendador de tarefas via cron
