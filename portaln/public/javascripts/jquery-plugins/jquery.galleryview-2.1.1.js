@@ -799,6 +799,8 @@ var window_loaded = false;
 					}
 				});
 			}
+			     
+			opts.afterLoad();
 			
 			// Hide loading box and display gallery
 			j_filmstrip.css('visibility','visible');
@@ -1008,7 +1010,6 @@ var window_loaded = false;
 				buildGallery();
 			}
 			
-			opts.afterLoad();
 		});
 	};
 	

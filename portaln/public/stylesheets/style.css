@@ -997,9 +997,11 @@ tr.row-b {
 	padding-right: 30%;
 }
 
-
-
-
+.loading {       
+	text-align: center;
+  line-height: 400px;
+	height: 400px;
+}
 
 
 
