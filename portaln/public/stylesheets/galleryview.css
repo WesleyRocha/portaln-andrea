@@ -33,7 +33,7 @@
 
 /* GALLERY LIST */
 /* IMPORTANT - Change '#photos' to the ID of your gallery list to prevent a flash of unstyled content */
-#photos { visibility: hidden; }
+#fotos { visibility: hidden; }
 
 /* GALLERY CONTAINER */
 .gallery { 

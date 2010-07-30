@@ -27,19 +27,19 @@ class Album < ActiveRecord::Base
   # Criacao dos indices de pesquisa
   # ======================================================================
 
-  define_index do
-    # fields
-    indexes titulo
-    indexes descricao
-    indexes workflow_state
-    has "workflow_state = 'publicado'", :as => :published, :type => :boolean
-    #has published_at, :sortable => true, :type => :datetime
-                                   
-    # Isso ira permitir que novos dados sejam automaticamente indexados
-    set_property :delta => :delayed
-    set_property :enable_star => true
-    set_property :min_prefix_len => 3
-  end
+  # define_index do
+  #   # fields
+  #   indexes titulo
+  #   indexes descricao
+  #   indexes workflow_state
+  #   has "workflow_state = 'publicado'", :as => :published, :type => :boolean
+  #   #has published_at, :sortable => true, :type => :datetime
+  #                                  
+  #   # Isso ira permitir que novos dados sejam automaticamente indexados
+  #   set_property :delta => :delayed
+  #   set_property :enable_star => true
+  #   set_property :min_prefix_len => 3
+  # end
   
   # ======================================================================
   # Definicao da maquina de estados

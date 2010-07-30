@@ -6,7 +6,7 @@
 		<%= image_tag 'load_32.gif'%>&nbsp;<%= t('portaln.upload.load') %>
 	</span>
 
-	<div id="fotos" style="display: none;">
+	<div id="fotos">
 		<% if @fotos and (not @fotos.empty?) %>
 			<%= render :partial => 'albuns/galerias/gallery_view', :locals => {:fotos => @fotos} %>
 		<% else %>             

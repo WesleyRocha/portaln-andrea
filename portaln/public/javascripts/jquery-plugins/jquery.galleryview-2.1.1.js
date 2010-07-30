@@ -420,7 +420,7 @@ var window_loaded = false;
 			}
 			// Set the height and width of each panel, and position it appropriately within the gallery
 			j_panels.each(function(i){
-				$(this).css({
+				$(this).css({                                         
 					'width':(opts.panel_width-extraWidth(j_panels))+'px',
 					'height':(opts.panel_height-extraHeight(j_panels))+'px',
 					'position':'absolute',
@@ -719,7 +719,8 @@ var window_loaded = false;
 	**		Construct HTML and CSS for the gallery, based on user options
 	*/
 		function buildGallery() {
-			var gallery_images = opts.show_filmstrip?$('img',j_frames):$('img',j_panels);
+			//var gallery_images = opts.show_filmstrip?$('img',j_frames):$('img',j_panels);
+			var gallery_images = $('img',j_panels);
 			// For each image in the gallery, add its original dimensions and scaled dimensions to the appropriate arrays for later reference
 			gallery_images.each(function(i){
 				img_h[i] = this.height;
@@ -818,6 +819,8 @@ var window_loaded = false;
 	**	MAIN PLUGIN CODE
 	*/
 		return this.each(function() {
+			opts.beforeLoad();
+			
 			//Hide the unstyled UL until we've created the gallery
 			$(this).css('visibility','hidden');
 			
@@ -873,6 +876,7 @@ var window_loaded = false;
 						p.addClass('panel');
 						im = $('<img />');
 						im.attr('src',j_frames.eq(i).find('img').eq(0).attr('src')).appendTo(p);
+						
 						p.prependTo(j_gallery);
 						j_frames.eq(i).find('.panel-overlay').remove().appendTo(p);
 					}
@@ -887,13 +891,22 @@ var window_loaded = false;
 			else {
 				// Wrap the frame images (and links, if applicable) in container divs
 				// These divs will handle cropping and zooming of the images
-				j_frames.each(function(i){
+				j_frames.each(function(i){                
+					var thumbSpan = $("span.inside_thumb", this);
+					
 					if($(this).find('a').length>0) {
 						$(this).find('a').wrap('<div class="img_wrap"></div>');
 					} else {
-						$(this).find('img').wrap('<div class="img_wrap"></div>');	
+						if(thumbSpan) {                           
+							var thumb = $("img", thumbSpan.remove());
+							     
+							$("img", this).attr('src', thumb.attr('src'));
+							$("img", this).wrap('<div class="img_wrap"></div>');
+						} else {
+							$(this).find('img').wrap('<div class="img_wrap"></div>');	
+						}
 					}
-				});
+				});                                            
 				j_frame_img_wrappers = $('.img_wrap',j_frames);
 			}
 			
@@ -981,6 +994,7 @@ var window_loaded = false;
 				'left':'0px',
 				'width':gallery_width+(filmstrip_orientation=='horizontal'?(gallery_padding*2):gallery_padding+Math.max(gallery_padding,filmstrip_margin))+'px',
 				'height':gallery_height+(filmstrip_orientation=='vertical'?(gallery_padding*2):gallery_padding+Math.max(gallery_padding,filmstrip_margin))+'px'
+				
 			}).appendTo(j_gallery);
 					
 			// Don't call the buildGallery function until the window is loaded
@@ -993,7 +1007,8 @@ var window_loaded = false;
 			} else {
 				buildGallery();
 			}
-					
+			
+			opts.afterLoad();
 		});
 	};
 	
@@ -1001,6 +1016,9 @@ var window_loaded = false;
 **	GalleryView options and default values
 */
 	$.fn.galleryView.defaults = {
+		       
+		beforeLoad: function(){},
+		afterLoad: function(){},
 		
 		show_panels: true,					//BOOLEAN - flag to show or hide panel portion of gallery
 		show_filmstrip: true,				//BOOLEAN - flag to show or hide filmstrip portion of gallery
